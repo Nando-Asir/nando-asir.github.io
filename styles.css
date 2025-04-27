@@ -12,7 +12,7 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #bb86fc; /* Mantenemos los colores del modo oscuro */
+  --primary-color: #bb86fc; 
   --secondary-color: #03dac6;
   --accent-color: #ff4081;
   --background-color: #121212;
