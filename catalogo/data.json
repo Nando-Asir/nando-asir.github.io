@@ -1,0 +1,1232 @@
+{
+    "libros": [
+      {
+        "titulo": "El principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "precio": 15.99,
+        "idioma": "Español",
+        "publicacion": 1943,
+        "paginas": 96,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "precio": 22.50,
+        "idioma": "Español",
+        "publicacion": 1967,
+        "paginas": 432,
+        "rating": 4.8
+      },
+      {
+        "titulo": "El señor de los anillos",
+        "autor": "J.R.R. Tolkien",
+        "precio": 34.99,
+        "idioma": "Español",
+        "publicacion": 1954,
+        "paginas": 1178,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "precio": 19.99,
+        "idioma": "Español",
+        "publicacion": 1997,
+        "paginas": 309,
+        "rating": 4.7
+      },
+      {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "precio": 12.99,
+        "idioma": "Español",
+        "publicacion": 1949,
+        "paginas": 326,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El diario de Ana Frank",
+        "autor": "Ana Frank",
+        "precio": 9.99,
+        "idioma": "Español",
+        "publicacion": 1947,
+        "paginas": 283,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "precio": 18.50,
+        "idioma": "Español",
+        "publicacion": 1605,
+        "paginas": 863,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Crimen y castigo",
+        "autor": "Fiódor Dostoievski",
+        "precio": 16.75,
+        "idioma": "Español",
+        "publicacion": 1866,
+        "paginas": 671,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Rayuela",
+        "autor": "Julio Cortázar",
+        "precio": 21.99,
+        "idioma": "Español",
+        "publicacion": 1963,
+        "paginas": 635,
+        "rating": 4.6
+      },
+      {
+        "titulo": "La sombra del viento",
+        "autor": "Carlos Ruiz Zafón",
+        "precio": 23.50,
+        "idioma": "Español",
+        "publicacion": 2001,
+        "paginas": 544,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Matar a un ruiseñor",
+        "autor": "Harper Lee",
+        "precio": 14.99,
+        "idioma": "Español",
+        "publicacion": 1960,
+        "paginas": 376,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Los juegos del hambre",
+        "autor": "Suzanne Collins",
+        "precio": 17.99,
+        "idioma": "Español",
+        "publicacion": 2008,
+        "paginas": 374,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Orgullo y prejuicio",
+        "autor": "Jane Austen",
+        "precio": 11.50,
+        "idioma": "Español",
+        "publicacion": 1813,
+        "paginas": 424,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Crónica de una muerte anunciada",
+        "autor": "Gabriel García Márquez",
+        "precio": 13.99,
+        "idioma": "Español",
+        "publicacion": 1981,
+        "paginas": 120,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El amor en los tiempos del cólera",
+        "autor": "Gabriel García Márquez",
+        "precio": 24.50,
+        "idioma": "Español",
+        "publicacion": 1985,
+        "paginas": 490,
+        "rating": 4.7
+      },
+      {
+        "titulo": "El Alquimista",
+        "autor": "Paulo Coelho",
+        "precio": 16.50,
+        "idioma": "Español",
+        "publicacion": 1988,
+        "paginas": 197,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Las aventuras de Sherlock Holmes",
+        "autor": "Arthur Conan Doyle",
+        "precio": 14.75,
+        "idioma": "Español",
+        "publicacion": 1892,
+        "paginas": 304,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Drácula",
+        "autor": "Bram Stoker",
+        "precio": 12.99,
+        "idioma": "Español",
+        "publicacion": 1897,
+        "paginas": 418,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Frankenstein",
+        "autor": "Mary Shelley",
+        "precio": 13.50,
+        "idioma": "Español",
+        "publicacion": 1818,
+        "paginas": 280,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "precio": 11.99,
+        "idioma": "Español",
+        "publicacion": 1890,
+        "paginas": 256,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Un mundo feliz",
+        "autor": "Aldous Huxley",
+        "precio": 15.25,
+        "idioma": "Español",
+        "publicacion": 1932,
+        "paginas": 311,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Rebelión en la granja",
+        "autor": "George Orwell",
+        "precio": 10.50,
+        "idioma": "Español",
+        "publicacion": 1945,
+        "paginas": 112,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "precio": 14.99,
+        "idioma": "Español",
+        "publicacion": 1925,
+        "paginas": 180,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Lo que el viento se llevó",
+        "autor": "Margaret Mitchell",
+        "precio": 21.50,
+        "idioma": "Español",
+        "publicacion": 1936,
+        "paginas": 1037,
+        "rating": 4.8
+      },
+      {
+        "titulo": "El Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "precio": 18.75,
+        "idioma": "Español",
+        "publicacion": 1937,
+        "paginas": 310,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Las Crónicas de Narnia",
+        "autor": "C.S. Lewis",
+        "precio": 24.99,
+        "idioma": "Español",
+        "publicacion": 1950,
+        "paginas": 767,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El nombre de la rosa",
+        "autor": "Umberto Eco",
+        "precio": 19.50,
+        "idioma": "Español",
+        "publicacion": 1980,
+        "paginas": 594,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Memorias de una Geisha",
+        "autor": "Arthur Golden",
+        "precio": 17.25,
+        "idioma": "Español",
+        "publicacion": 1997,
+        "paginas": 448,
+        "rating": 4.8
+      },
+      {
+        "titulo": "La Casa de los Espíritus",
+        "autor": "Isabel Allende",
+        "precio": 22.75,
+        "idioma": "Español",
+        "publicacion": 1982,
+        "paginas": 478,
+        "rating": 4.7
+      },
+      {
+        "titulo": "El Código Da Vinci",
+        "autor": "Dan Brown",
+        "precio": 16.99,
+        "idioma": "Español",
+        "publicacion": 2003,
+        "paginas": 656,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Ángeles y Demonios",
+        "autor": "Dan Brown",
+        "precio": 15.50,
+        "idioma": "Español",
+        "publicacion": 2000,
+        "paginas": 608,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El Símbolo Perdido",
+        "autor": "Dan Brown",
+        "precio": 18.25,
+        "idioma": "Español",
+        "publicacion": 2009,
+        "paginas": 608,
+        "rating": 4.4
+      },
+      {
+        "titulo": "Inferno",
+        "autor": "Dan Brown",
+        "precio": 17.75,
+        "idioma": "Español",
+        "publicacion": 2013,
+        "paginas": 560,
+        "rating": 4.3
+      },
+      {
+        "titulo": "Origen",
+        "autor": "Dan Brown",
+        "precio": 19.99,
+        "idioma": "Español",
+        "publicacion": 2017,
+        "paginas": 688,
+        "rating": 4.2
+      },
+      {
+        "titulo": "El Señor de los Anillos: El Silmarillion",
+        "autor": "J.R.R. Tolkien",
+        "precio": 27.50,
+        "idioma": "Español",
+        "publicacion": 1977,
+        "paginas": 464,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Las Dos Torres",
+        "autor": "J.R.R. Tolkien",
+        "precio": 26.25,
+        "idioma": "Español",
+        "publicacion": 1954,
+        "paginas": 352,
+        "rating": 4.8
+      },
+      {
+        "titulo": "El Retorno del Rey",
+        "autor": "J.R.R. Tolkien",
+        "precio": 28.99,
+        "idioma": "Español",
+        "publicacion": 1955,
+        "paginas": 416,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Cazadores de Sombras: Ciudad de Hueso",
+        "autor": "Cassandra Clare",
+        "precio": 15.75,
+        "idioma": "Español",
+        "publicacion": 2007,
+        "paginas": 486,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Ciudad de Ceniza",
+        "autor": "Cassandra Clare",
+        "precio": 16.50,
+        "idioma": "Español",
+        "publicacion": 2008,
+        "paginas": 432,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Ciudad de Cristal",
+        "autor": "Cassandra Clare",
+        "precio": 17.25,
+        "idioma": "Español",
+        "publicacion": 2009,
+        "paginas": 544,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Ciudad de los Ángeles Caídos",
+        "autor": "Cassandra Clare",
+        "precio": 18.00,
+        "idioma": "Español",
+        "publicacion": 2011,
+        "paginas": 480,
+        "rating": 4.4
+      },
+      {
+        "titulo": "Ciudad de las Almas Perdidas",
+        "autor": "Cassandra Clare",
+        "precio": 19.50,
+        "idioma": "Español",
+        "publicacion": 2012,
+        "paginas": 576,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Ciudad del Fuego Celestial",
+        "autor": "Cassandra Clare",
+        "precio": 20.25,
+        "idioma": "Español",
+        "publicacion": 2014,
+        "paginas": 736,
+        "rating": 4.6
+      }
+    ],
+    "comics": [
+      {
+        "titulo": "Batman: The Killing Joke",
+        "autor": "Alan Moore",
+        "precio": 29.99,
+        "idioma": "Inglés",
+        "publicacion": 1988,
+        "paginas": 64,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Watchmen",
+        "autor": "Alan Moore",
+        "precio": 34.50,
+        "idioma": "Español",
+        "publicacion": 1986,
+        "paginas": 416,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Sandman: Preludios y Nocturnos",
+        "autor": "Neil Gaiman",
+        "precio": 25.99,
+        "idioma": "Español",
+        "publicacion": 1989,
+        "paginas": 240,
+        "rating": 4.8
+      },
+      {
+        "titulo": "V de Vendetta",
+        "autor": "Alan Moore",
+        "precio": 27.50,
+        "idioma": "Español",
+        "publicacion": 1982,
+        "paginas": 296,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Maus",
+        "autor": "Art Spiegelman",
+        "precio": 22.90,
+        "idioma": "Español",
+        "publicacion": 1980,
+        "paginas": 296,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Sin City",
+        "autor": "Frank Miller",
+        "precio": 19.99,
+        "idioma": "Español",
+        "publicacion": 1991,
+        "paginas": 208,
+        "rating": 4.6
+      },
+      {
+        "titulo": "The Walking Dead: Días Pasados",
+        "autor": "Robert Kirkman",
+        "precio": 15.99,
+        "idioma": "Español",
+        "publicacion": 2003,
+        "paginas": 144,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Persépolis",
+        "autor": "Marjane Satrapi",
+        "precio": 20.50,
+        "idioma": "Español",
+        "publicacion": 2000,
+        "paginas": 352,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Akira",
+        "autor": "Katsuhiro Otomo",
+        "precio": 32.99,
+        "idioma": "Español",
+        "publicacion": 1982,
+        "paginas": 368,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Blacksad",
+        "autor": "Juan Díaz Canales",
+        "precio": 16.95,
+        "idioma": "Español",
+        "publicacion": 2000,
+        "paginas": 56,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Saga",
+        "autor": "Brian K. Vaughan",
+        "precio": 18.75,
+        "idioma": "Español",
+        "publicacion": 2012,
+        "paginas": 160,
+        "rating": 4.9
+      },
+      {
+        "titulo": "From Hell",
+        "autor": "Alan Moore",
+        "precio": 29.95,
+        "idioma": "Español",
+        "publicacion": 1989,
+        "paginas": 572,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Y: El último hombre",
+        "autor": "Brian K. Vaughan",
+        "precio": 22.50,
+        "idioma": "Español",
+        "publicacion": 2002,
+        "paginas": 240,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Blankets",
+        "autor": "Craig Thompson",
+        "precio": 27.99,
+        "idioma": "Español",
+        "publicacion": 2003,
+        "paginas": 592,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Daredevil: Born Again",
+        "autor": "Frank Miller",
+        "precio": 21.50,
+        "idioma": "Español",
+        "publicacion": 1986,
+        "paginas": 176,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Watchmen",
+        "autor": "Alan Moore",
+        "precio": 34.50,
+        "idioma": "Español",
+        "publicacion": 1986,
+        "paginas": 416,
+        "rating": 4.8
+      },
+      {
+        "titulo": "The Dark Knight Returns",
+        "autor": "Frank Miller",
+        "precio": 30.00,
+        "idioma": "Español",
+        "publicacion": 1986,
+        "paginas": 208,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Batman: Año Uno",
+        "autor": "Frank Miller",
+        "precio": 25.50,
+        "idioma": "Español",
+        "publicacion": 1987,
+        "paginas": 144,
+        "rating": 4.7
+      },
+      {
+        "titulo": "All-Star Superman",
+        "autor": "Grant Morrison",
+        "precio": 28.00,
+        "idioma": "Inglés",
+        "publicacion": 2005,
+        "paginas": 328,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Kingdom Come",
+        "autor": "Mark Waid",
+        "precio": 32.00,
+        "idioma": "Inglés",
+        "publicacion": 1996,
+        "paginas": 224,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Civil War",
+        "autor": "Mark Millar",
+        "precio": 27.50,
+        "idioma": "Español",
+        "publicacion": 2006,
+        "paginas": 240,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Planet Hulk",
+        "autor": "Greg Pak",
+        "precio": 29.00,
+        "idioma": "Español",
+        "publicacion": 2006,
+        "paginas": 176,
+        "rating": 4.7
+      },
+      {
+        "titulo": "The Infinity Gauntlet",
+        "autor": "Jim Starlin",
+        "precio": 31.00,
+        "idioma": "Inglés",
+        "publicacion": 1991,
+        "paginas": 256,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Crisis on Infinite Earths",
+        "autor": "Marv Wolfman",
+        "precio": 33.00,
+        "idioma": "Inglés",
+        "publicacion": 1985,
+        "paginas": 336,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Identity Crisis",
+        "autor": "Brad Meltzer",
+        "precio": 26.00,
+        "idioma": "Español",
+        "publicacion": 2004,
+        "paginas": 224,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Blackest Night",
+        "autor": "Geoff Johns",
+        "precio": 28.50,
+        "idioma": "Inglés",
+        "publicacion": 2009,
+        "paginas": 240,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Flashpoint",
+        "autor": "Geoff Johns",
+        "precio": 29.50,
+        "idioma": "Español",
+        "publicacion": 2011,
+        "paginas": 160,
+        "rating": 4.7
+      },
+      {
+        "titulo": "The Sandman: The Doll's House",
+        "autor": "Neil Gaiman",
+        "precio": 27.00,
+        "idioma": "Español",
+        "publicacion": 1990,
+        "paginas": 256,
+        "rating": 4.8
+      },
+      {
+        "titulo": "The Sandman: Dream Country",
+        "autor": "Neil Gaiman",
+        "precio": 26.50,
+        "idioma": "Español",
+        "publicacion": 1991,
+        "paginas": 160,
+        "rating": 4.9
+      },
+      {
+        "titulo": "The Sandman: Season of Mists",
+        "autor": "Neil Gaiman",
+        "precio": 28.00,
+        "idioma": "Español",
+        "publicacion": 1992,
+        "paginas": 304,
+        "rating": 4.7
+      },
+      {
+        "titulo": "The Sandman: A Game of You",
+        "autor": "Neil Gaiman",
+        "precio": 25.50,
+        "idioma": "Español",
+        "publicacion": 1993,
+        "paginas": 224,
+        "rating": 4.6
+      },
+      {
+        "titulo": "The Sandman: Fables and Reflections",
+        "autor": "Neil Gaiman",
+        "precio": 27.50,
+        "idioma": "Español",
+        "publicacion": 1993,
+        "paginas": 288,
+        "rating": 4.8
+      },
+      {
+        "titulo": "The Sandman: Worlds' End",
+        "autor": "Neil Gaiman",
+        "precio": 29.00,
+        "idioma": "Español",
+        "publicacion": 1993,
+        "paginas": 352,
+        "rating": 4.9
+      },
+      {
+        "titulo": "The Sandman: The Kindly Ones",
+        "autor": "Neil Gaiman",
+        "precio": 30.50,
+        "idioma": "Español",
+        "publicacion": 1996,
+        "paginas": 320,
+        "rating": 4.7
+      },
+      {
+        "titulo": "The Sandman: The Wake",
+        "autor": "Neil Gaiman",
+        "precio": 26.00,
+        "idioma": "Español",
+        "publicacion": 1996,
+        "paginas": 240,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Lucifer: Genesis",
+        "autor": "Mike Carey",
+        "precio": 28.00,
+        "idioma": "Inglés",
+        "publicacion": 1999,
+        "paginas": 144,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Lucifer: Children and Monsters",
+        "autor": "Mike Carey",
+        "precio": 29.50,
+        "idioma": "Inglés",
+        "publicacion": 2000,
+        "paginas": 168,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Lucifer: A Dalliance with the Damned",
+        "autor": "Mike Carey",
+        "precio": 30.00,
+        "idioma": "Inglés",
+        "publicacion": 2001,
+        "paginas": 176,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Lucifer: The Divine Comedy",
+        "autor": "Mike Carey",
+        "precio": 27.50,
+        "idioma": "Inglés",
+        "publicacion": 2001,
+        "paginas": 160,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Lucifer: Inferno",
+        "autor": "Mike Carey",
+        "precio": 26.00,
+        "idioma": "Inglés",
+        "publicacion": 2002,
+        "paginas": 144,
+        "rating": 4.5
+      }
+    ],
+    "ebooks": [
+      {
+        "titulo": "El Poder del Ahora",
+        "autor": "Eckhart Tolle",
+        "precio": 9.99,
+        "idioma": "Español",
+        "publicacion": 1997,
+        "paginas": 224,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Los 7 Hábitos de la Gente Altamente Efectiva",
+        "autor": "Stephen Covey",
+        "precio": 12.50,
+        "idioma": "Español",
+        "publicacion": 1989,
+        "paginas": 384,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Inteligencia Emocional",
+        "autor": "Daniel Goleman",
+        "precio": 11.99,
+        "idioma": "Español",
+        "publicacion": 1995,
+        "paginas": 352,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Padre Rico, Padre Pobre",
+        "autor": "Robert Kiyosaki",
+        "precio": 10.50,
+        "idioma": "Español",
+        "publicacion": 1997,
+        "paginas": 336,
+        "rating": 4.7
+      },
+      {
+        "titulo": "El Secreto",
+        "autor": "Rhonda Byrne",
+        "precio": 8.99,
+        "idioma": "Español",
+        "publicacion": 2006,
+        "paginas": 216,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Piense y Hágase Rico",
+        "autor": "Napoleon Hill",
+        "precio": 9.50,
+        "idioma": "Español",
+        "publicacion": 1937,
+        "paginas": 320,
+        "rating": 4.8
+      },
+      {
+        "titulo": "El Hombre Más Rico de Babilonia",
+        "autor": "George S. Clason",
+        "precio": 7.99,
+        "idioma": "Español",
+        "publicacion": 1926,
+        "paginas": 144,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Cómo Ganar Amigos e Influir Sobre las Personas",
+        "autor": "Dale Carnegie",
+        "precio": 10.99,
+        "idioma": "Español",
+        "publicacion": 1936,
+        "paginas": 288,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Los Cuatro Acuerdos",
+        "autor": "Miguel Ruiz",
+        "precio": 8.50,
+        "idioma": "Español",
+        "publicacion": 1997,
+        "paginas": 160,
+        "rating": 4.6
+      },
+      {
+        "titulo": "El Arte de la Guerra",
+        "autor": "Sun Tzu",
+        "precio": 6.99,
+        "idioma": "Español",
+        "publicacion": -500,
+        "paginas": 96,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Sapiens: De Animales a Dioses",
+        "autor": "Yuval Noah Harari",
+        "precio": 13.50,
+        "idioma": "Español",
+        "publicacion": 2011,
+        "paginas": 448,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Homo Deus: Breve Historia del Mañana",
+        "autor": "Yuval Noah Harari",
+        "precio": 14.99,
+        "idioma": "Español",
+        "publicacion": 2015,
+        "paginas": 496,
+        "rating": 4.7
+      },
+      {
+        "titulo": "21 Lecciones para el Siglo XXI",
+        "autor": "Yuval Noah Harari",
+        "precio": 12.99,
+        "idioma": "Español",
+        "publicacion": 2018,
+        "paginas": 368,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "autor": "Robert C. Martin",
+        "precio": 25.00,
+        "idioma": "Inglés",
+        "publicacion": 2008,
+        "paginas": 464,
+        "rating": 4.8
+      },
+      {
+        "titulo": "The Pragmatic Programmer: Your Journey To Mastery",
+        "autor": "Andrew Hunt, David Thomas",
+        "precio": 27.50,
+        "idioma": "Inglés",
+        "publicacion": 1999,
+        "paginas": 352,
+        "rating": 4.9
+      },
+      {
+        "titulo": "El código del alma",
+        "autor": "Laura Martínez",
+        "precio": 9.99,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 312,
+        "rating": 4.5
+      },
+      {
+        "titulo": "Viaje a través del tiempo",
+        "autor": "Carlos Ruiz",
+        "precio": 7.49,
+        "idioma": "Español",
+        "publicacion": 2019,
+        "paginas": 275,
+        "rating": 4.2
+      },
+      {
+        "titulo": "La sombra del caos",
+        "autor": "Elena Torres",
+        "precio": 6.99,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 298,
+        "rating": 4.3
+      },
+      {
+        "titulo": "Caminos de fuego",
+        "autor": "Gabriel Fernández",
+        "precio": 8.25,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 350,
+        "rating": 4.4
+      },
+      {
+        "titulo": "Secretos del pasado",
+        "autor": "Marina López",
+        "precio": 5.99,
+        "idioma": "Español",
+        "publicacion": 2018,
+        "paginas": 220,
+        "rating": 4.0
+      },
+      {
+        "titulo": "La última señal",
+        "autor": "Julián Pérez",
+        "precio": 7.99,
+        "idioma": "Español",
+        "publicacion": 2023,
+        "paginas": 310,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Ecos del silencio",
+        "autor": "Ana Beltrán",
+        "precio": 6.50,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 289,
+        "rating": 4.1
+      },
+      {
+        "titulo": "El jardín de las ideas",
+        "autor": "Ricardo Medina",
+        "precio": 10.99,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 400,
+        "rating": 4.8
+      },
+      {
+        "titulo": "Fragmentos de un sueño",
+        "autor": "Lucía Navarro",
+        "precio": 4.99,
+        "idioma": "Español",
+        "publicacion": 2017,
+        "paginas": 198,
+        "rating": 3.9
+      },
+      {
+        "titulo": "Crónicas del viento",
+        "autor": "Diego Solís",
+        "precio": 8.75,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 336,
+        "rating": 4.4
+      },
+      {
+        "titulo": "El despertar de los dioses",
+        "autor": "Valeria Moreno",
+        "precio": 9.49,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 370,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Más allá del umbral",
+        "autor": "Tomás Herrera",
+        "precio": 6.80,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 310,
+        "rating": 4.2
+      },
+      {
+        "titulo": "El arte de caer",
+        "autor": "Isabel Ríos",
+        "precio": 5.75,
+        "idioma": "Español",
+        "publicacion": 2019,
+        "paginas": 245,
+        "rating": 4.1
+      },
+      {
+        "titulo": "En la mente del genio",
+        "autor": "Roberto Camacho",
+        "precio": 11.00,
+        "idioma": "Español",
+        "publicacion": 2023,
+        "paginas": 412,
+        "rating": 4.9
+      },
+      {
+        "titulo": "Relatos de lo imposible",
+        "autor": "Nuria Casado",
+        "precio": 6.30,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 278,
+        "rating": 4.0
+      },
+      {
+        "titulo": "El laberinto de cristal",
+        "autor": "Héctor Aguilar",
+        "precio": 8.90,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 340,
+        "rating": 4.3
+      },
+      {
+        "titulo": "Al borde de la realidad",
+        "autor": "Patricia León",
+        "precio": 7.25,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 300,
+        "rating": 4.1
+      },
+      {
+        "titulo": "El susurro del bosque",
+        "autor": "Sergio Molina",
+        "precio": 5.49,
+        "idioma": "Español",
+        "publicacion": 2019,
+        "paginas": 215,
+        "rating": 3.8
+      },
+      {
+        "titulo": "Puertas ocultas",
+        "autor": "Laura Estrada",
+        "precio": 9.15,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 355,
+        "rating": 4.5
+      },
+      {
+        "titulo": "El día que murió el sol",
+        "autor": "Daniel Muñoz",
+        "precio": 8.60,
+        "idioma": "Español",
+        "publicacion": 2023,
+        "paginas": 360,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Colores del alma",
+        "autor": "Natalia Romero",
+        "precio": 5.20,
+        "idioma": "Español",
+        "publicacion": 2018,
+        "paginas": 210,
+        "rating": 4.0
+      },
+      {
+        "titulo": "Códigos invisibles",
+        "autor": "Iván Castillo",
+        "precio": 6.95,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 270,
+        "rating": 4.2
+      },
+      {
+        "titulo": "La huella del tiempo",
+        "autor": "María José Díaz",
+        "precio": 7.80,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 322,
+        "rating": 4.3
+      },
+      {
+        "titulo": "Horizonte prohibido",
+        "autor": "Esteban Rivera",
+        "precio": 9.30,
+        "idioma": "Español",
+        "publicacion": 2023,
+        "paginas": 390,
+        "rating": 4.6
+      },
+      {
+        "titulo": "Voces en la oscuridad",
+        "autor": "Clara Peña",
+        "precio": 6.70,
+        "idioma": "Español",
+        "publicacion": 2019,
+        "paginas": 265,
+        "rating": 4.0
+      },
+      {
+        "titulo": "El reflejo del abismo",
+        "autor": "Luis Carrillo",
+        "precio": 8.15,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 328,
+        "rating": 4.2
+      },
+      {
+        "titulo": "Instinto animal",
+        "autor": "Paula Romero",
+        "precio": 7.10,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 288,
+        "rating": 4.1
+      },
+      {
+        "titulo": "Raíces perdidas",
+        "autor": "Javier Vargas",
+        "precio": 9.80,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 375,
+        "rating": 4.4
+      },
+      {
+        "titulo": "Sombras del ayer",
+        "autor": "Beatriz Romero",
+        "precio": 5.85,
+        "idioma": "Español",
+        "publicacion": 2018,
+        "paginas": 240,
+        "rating": 4.0
+      },
+      {
+        "titulo": "El canto de la luna",
+        "autor": "Fernando Pardo",
+        "precio": 8.40,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 330,
+        "rating": 4.3
+      },
+      {
+        "titulo": "Luz entre las sombras",
+        "autor": "Silvia Herrera",
+        "precio": 7.95,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 310,
+        "rating": 4.4
+      },
+      {
+        "titulo": "Tiempos rotos",
+        "autor": "Álvaro Crespo",
+        "precio": 6.40,
+        "idioma": "Español",
+        "publicacion": 2019,
+        "paginas": 280,
+        "rating": 4.1
+      },
+      {
+        "titulo": "El enigma del orbe",
+        "autor": "Montserrat Cano",
+        "precio": 10.50,
+        "idioma": "Español",
+        "publicacion": 2022,
+        "paginas": 405,
+        "rating": 4.7
+      },
+      {
+        "titulo": "Niebla roja",
+        "autor": "Óscar Ledesma",
+        "precio": 6.20,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 260,
+        "rating": 3.9
+      },
+      {
+        "titulo": "El arquitecto del universo",
+        "autor": "Inés Torres",
+        "precio": 11.25,
+        "idioma": "Español",
+        "publicacion": 2023,
+        "paginas": 420,
+        "rating": 4.8
+      },
+      {
+        "titulo": "El pacto del lobo",
+        "autor": "Manuel Ortega",
+        "precio": 7.60,
+        "idioma": "Español",
+        "publicacion": 2021,
+        "paginas": 295,
+        "rating": 4.2
+      },
+      {
+        "titulo": "Travesía interior",
+        "autor": "Carmen Velasco",
+        "precio": 5.95,
+        "idioma": "Español",
+        "publicacion": 2018,
+        "paginas": 225,
+        "rating": 4.0
+      },
+      {
+        "titulo": "La última frontera",
+        "autor": "Joaquín Ramírez",
+        "precio": 8.35,
+        "idioma": "Español",
+        "publicacion": 2020,
+        "paginas": 335,
+        "rating": 4.3
+      }
+    ]
+}
