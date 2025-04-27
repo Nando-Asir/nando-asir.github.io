@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fernando</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Portfolio</h1>
+            <p>Demostrando mis conocimientos y logros académicos</p>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i> Modo Oscuro
+            </button>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about"><i class="fas fa-user"></i> Sobre mí</a></li>
+            <li><a href="#subjects"><i class="fas fa-file"></i> Asignaturas</a></li>
+            <li><a href="#projects"><i class="fab fa-github"></i> Proyectos</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <img src="imagenes/profile.jpg" alt="Mi foto de perfil" class="profile-img">
+                <div class="about-text">
+                    <h3>¡Hola! Soy Fernando Durán</h3>
+                    <p>Estudiante de Informática apasionado por la tecnología y el desarrollo de software. Actualmente estoy cursando 1er año de Administración de Sistemas Informáticos en Red (ASIR). Me encanta aprender, documentar todo y ayudar a otros.
+                        <br>A mitad de curso fui padre, pero eso no me impidió sacar el curso adelante y con buenas notas</p>
+                    <p>En este portfolio encontrarás un resumen de mis asignaturas, proyectos personales y mis logros académicos.</p>
+                    <a href="cv.html" class="download-btn" style="margin-top: 20px;">
+                        <i class="fas fa-file-alt"></i> Ver mi CV completo
+                    </a>
+                    <div class="skills">
+                        <h4>Mis habilidades:</h4>
+                        <ul>
+                            <li>Linux (Debian, Ubuntu)</li>
+                            <li>Redes (Cisco Packet Tracer, IPv6, VLSM)</li>
+                            <li>Virtualización (Proxmox, VirtualBox, Docker)</li>
+                            <li>Bases de datos (SQL, Oracle)</li>
+                            <li>Programación en bash y scripts</li>
+                            <li>Git & GitHub</li>
+                            <li>Digitalización de documentos (OCR, HTR)</li>
+                            <li>Desarrollo Web (XML, XSL, HTML)</li>
+                            <li>Programación con JavaScript</li>
+                            <li>Diseño (CSS)</li>
+                            <li>Manejo multi-IA</li>
+                            <li>Organización de equipo</li>
+                            <li>Conocimientos de Hardware</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="subjects">
+        <div class="container">
+            <h2 class="section-title">Mis Asignaturas 1º Año</h2>
+            <div class="cards-container">
+                <!-- Asignatura 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Lenguaje de Marca</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Asignatura enfocada en el desarrollo de documentos web mediante lenguajes de marcado.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/lenguaje-marca/ud1_XML.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> XML
+                            </a>
+                            <a href="Apuntes/lenguaje-marca/ud2_xpathXquery.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> XML, XQuery y XPath
+                            </a>
+                            <a href="Apuntes/lenguaje-marca/ud3_HTML.pd" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> HTML
+                            </a>
+                            <a href="Apuntes/lenguaje-marca/ud4_css.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> CSS
+                            </a>
+                            <a href="Apuntes/lenguaje-marca/ud5_javascript.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> JavaScript
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Planificación de Redes</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Diseño e implementación de infraestructuras de red y protocolos de comunicación.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/plani-redes/ud1_caracterizacionRedes.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Caracterización de Redes
+                            </a>
+                            <a href="Apuntes/plani-redes/ud2_modelosOSI-TCPIP.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Modelos OSI y TCP/IP
+                            </a>
+                            <a href="Apuntes/plani-redes/ud3_direccionamientoIP.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Direccionamiento
+                            </a>
+                            <a href="Apuntes/plani-redes/ud4_tecnologiaInalambrica.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Tecnología Inalámbrica
+                            </a>
+                            <a href="Apuntes/plani-redes/ud5_switchesCisco.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Switches Cisco
+                            </a>
+                            <a href="Apuntes/plani-redes/ud6_routerCisco.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Routers Cisco
+                            </a>
+                            <a href="Apuntes/plani-redes/documentoCompartido.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Documento de Interés
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Implantación de Sistemas Operativos</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Instalación, configuración y administración de sistemas operativos Windows y Linux.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/implantacion-sistemas/comandosLinuxBasico.pd" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Comandos Linux Básico
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/comandosLinuxIntermedio.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Comandos Linux Intermedio
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/scripts.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Scripts
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/programacionTareas_gestionUsuarios.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Programación de Tareas y Gestión de Usuarios
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/gestionProcesos_gestionServicios.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Gestión de Procesos y Servicios
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/gestionSamba_gestionNFS.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Gestión de Carpetas Compartidas Samba y NFS
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/gestionModulos_gestionImpresoras.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Gestión de Módulos e Impresoras
+                            </a>
+                            <a href="Apuntes/implantacion-sistemas/gestionLVM_Cuotas_RAID.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Gestión de Volúmenes Lógicos, Cuotas y RAIDs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 4 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Gestión de Bases de Datos</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Diseño e implementación de bases de datos relacionales con SQL en Oracle.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/base-datos/ud1_DDL.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> DDL
+                            </a>
+                            <a href="Apuntes/base-datos/ud2_comandosSQL.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> DDL y DML
+                            </a>
+                            <a href="Apuntes/base-datos/ud3_consultas.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Consultas
+                            </a>
+                            <a href="Apuntes/base-datos/ud4_subConsultas.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Subconsultas
+                            </a>
+                            <a href="Apuntes/base-datos/proyectoBBDD.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 5 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Fundamentos de Hardware</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Componentes físicos de los sistemas informáticos y su mantenimiento.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/fund-hardware/ud1_sistemas_informaticos.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Sistemas Informáticos
+                            </a>
+                            <a href="Apuntes/fund-hardware/ud2_representacion_comunicacion.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Representación de la Comunicación
+                            </a>
+                            <a href="Apuntes/fund-hardware/ud3_arquitectura_ordenador.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Arquitectura de un Ordenador
+                            </a>
+                            <a href="Apuntes/fund-hardware/ud4_componentesOrdenador.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Componentes de un Ordenador
+                            </a>
+                            <a href="Apuntes/fund-hardware/ud5_CPD-Servidor-RAID-SAI.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> CPD, Servidor, RAID y SAI
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 6 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Digitalización</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Transformación digital de procesos y documentación empresarial.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/digitalizacion/digitalización.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Procesos Digitales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 7 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sostenibilidad</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Prácticas sostenibles en el ámbito de las tecnologías de la información.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/sostenibilidad/sostenibilidad.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Sostenibilidad
+                            </a>
+                            <a href="Apuntes/sostenibilidad/retosAmbientales.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Retos Ambientales
+                            </a>
+                            <a href="Apuntes/sostenibilidad/ud3_4_5_6.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Economía Circular
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asignatura 8 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>IPE</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Iniciación a la actividad emprendedora y empresarial.</p>
+                        <table class="grades-table">
+                            <tr>
+                                <th>Trimestre</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tr>
+                                <td>Primer trimestre</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo trimestre</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        <div class="notes-section">
+                            <h4>Apuntes disponibles:</h4>
+                            <a href="Apuntes/ipe/ud1_saludLaboral.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Salud Laboral
+                            </a>
+                            <a href="Apuntes/ipe/ud2_riesgosProfesionales.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Riesgos Profesionales
+                            </a>
+                            <a href="Apuntes/ipe/ud3_mindfulness.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> MindFulness
+                            </a>
+                            <a href="Apuntes/ipe/ud4_relacionLaboral.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> Relación Laboral
+                            </a>
+                            <a href="Apuntes/ipe/ud5_contratoTrabajo.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> El Contrato Laboral
+                            </a>
+                            <a href="Apuntes/ipe/ud6_elSalario.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i> El Salario
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos GitHub</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Portfolio Web</h3>
+                    <p>Mi portfolio personal desarrollado con HTML, CSS y JavaScript.</p>
+                    <a href="https://github.com/Nando-Asir/nando-asir.github.io" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <h3>Teclados</h3>
+                    <p>Análisis técnico y funcional de diferentes tipos de teclados.</p>
+                    <a href="https://github.com/Nando-Asir/FHW-Teclados" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Configuración Cisco</h3>
+                    <p>Manual para la configutación de Switches y Routers Cisco.</p>
+                    <a href="https://github.com/Nando-Asir/ConfiguracionCISCO" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Docker</h3>
+                    <p>Guía de instalación y sudo de Docker en Debian o Ubuntu.</p>
+                    <a href="https://github.com/Nando-Asir/Docker" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Raspberry Pi 4</h3>
+                    <p>Diversas prácticas y proyectos realizados con la Raspberry Pi 4 usando Scratch.</p>
+                    <a href="https://github.com/Nando-Asir/practicasRaspberry" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Glosario Informático</h3>
+                    <p>Términos técnicos relacionados con la informática.</p>
+                    <a href="https://github.com/Nando-Asir/GlosarioInformatico" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Nando-Asir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/duran-fernando" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:ferdurave@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+            <div class="contact-info">
+                <p>© 2025 Fernando ASIR. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

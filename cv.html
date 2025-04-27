@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernando Durán | CV Interactivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <style>
+      /* Estilos específicos para el CV */
+      .cv-interactive {
+        max-width: 1000px;
+        margin: 2rem auto;
+      }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .skill-category {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .skill-category:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill-category h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-item {
+        margin-bottom: 0.2rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .skill-meter {
+        height: 8px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+      }
+
+      .skill-level {
+        height: 100%;
+        background: var(--secondary-color);
+        border-radius: 4px;
+        transition: width 1s ease-in-out;
+      }
+
+      .experience-accordion {
+        margin: 2rem 0;
+      }
+
+      .experience-item {
+        background: var(--card-bg);
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-header {
+        padding: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s;
+      }
+
+      .experience-header:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      .experience-header h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.3rem;
+      }
+
+      .experience-meta {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-color);
+        opacity: 0.8;
+        font-size: 0.9rem;
+      }
+
+      .experience-content {
+        padding: 0 1.2rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+      }
+
+      .experience-item.active .experience-content {
+        padding: 0 1.2rem 1.2rem;
+        max-height: 500px;
+      }
+
+      .experience-content ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .education-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .education-card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .education-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .education-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .education-meta {
+        color: var(--text-color);
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .education-cards ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .interactive-badge {
+        display: inline-block;
+        background: rgba(3, 218, 198, 0.1);
+        color: var(--secondary-color);
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+        transition: transform 0.3s;
+      }
+
+      .interactive-badge:hover {
+        transform: scale(1.05);
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .info-card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 1.2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .skills-container {
+          grid-template-columns: 1fr;
+        }
+
+        .education-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Fernando Durán</h1>
+        <p>Curriculum Vitae Interactivo</p>
+        <button id="themeToggle" class="theme-toggle">
+          <i class="fas fa-moon"></i> Modo Oscuro
+        </button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="back-btn"
+            ><i class="fas fa-home"></i> Inicio</a
+          >
+        </li>
+        <li>
+          <a href="#skills"><i class="fas fa-laptop-code"></i> Habilidades</a>
+        </li>
+        <li>
+          <a href="#experience"><i class="fas fa-briefcase"></i> Experiencia</a>
+        </li>
+        <li>
+          <a href="#education"
+            ><i class="fas fa-graduation-cap"></i> Formación</a
+          >
+        </li>
+        <li>
+          <a href="#additional"><i class="fas fa-info-circle"></i> Adicional</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container cv-interactive">
+      <section id="skills">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3><i class="fas fa-server"></i>Sistemas</h3>
+            <div class="skill-item">
+              <span>Linux (Debian/Ubuntu)</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Windows Server</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 70%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Virtualización (Proxmox)</span>
+              <span>100%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 100%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Scripting Bash</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-network-wired"></i> Redes</h3>
+            <div class="skill-item">
+              <span>Cisco Packet Tracer</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>IPv6/VLSM</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Configuración Routers</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Configuración Switches</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Lenguaje de Marca</h3>
+            <div class="skill-item">
+              <span>XML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>XSL</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>JSON</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Página Web</h3>
+            <div class="skill-item">
+              <span>HTML</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 95%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+
+            <div class="skill-item">
+              <span>SQL</span>
+              <span>100%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 100%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Oracle </span>
+              <span>100%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 100%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Docker</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-robot"></i> Otras Tecnologías</h3>
+            <div class="skill-item">
+              <span>OCR/HTR</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Hardware</span>
+              <span>100%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 100%"></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Automatización IA</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-level" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="soft-skills">
+          <h3 class="section-subtitle">Soft Skills</h3>
+          <div class="badges-container">
+            <span class="interactive-badge">Resolución de problemas</span>
+            <span class="interactive-badge">Trabajo en equipo</span>
+            <span class="interactive-badge">Autodisciplina</span>
+            <span class="interactive-badge">Comunicación efectiva</span>
+            <span class="interactive-badge">Adaptabilidad</span>
+            <span class="interactive-badge">Organización</span>
+            <span class="interactive-badge">Curiosidad</span>
+            <span class="interactive-badge">Toma de decisiones</span>
+            <span class="interactive-badge">Gestión del estrés</span>
+            <span class="interactive-badge">Creatividad</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">Experiencia Profesional</h2>
+        <div class="experience-accordion">
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Mediador de Seguros</h3>
+                <div class="experience-meta">
+                  <span>TRANSCOM WW SLU</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Fidelización de clientes mediante estrategias personalizadas</li>
+                <li>Gestión eficiente de llamadas entrantes y resolución de consultas</li>
+                <li>Cumplimiento sistemático de objetivos individuales</li>
+                <li>Trabajo con sistemas CRM y bases de datos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Mozo de Almacén</h3>
+                <div class="experience-meta">
+                  <span>MERCADONA SA</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Manejo de maquinaria (transpaletas, carretillas elevadoras)</li>
+                <li>Gestión autónoma de objetivos y tareas asignadas</li>
+                <li>Control de inventarios y procesos de reposición</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Comercial Telefonía</h3>
+                <div class="experience-meta">
+                  <span>MAYCO COMUNICACIONES</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Atención al cliente especializada</li>
+                <li>Asesoramiento en productos tecnológicos</li>
+                <li>Gestión de inventarios y reposición</li>
+                <li>Tareas comerciales y ventas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Teleoperador</h3>
+                <div class="experience-meta">
+                  <span>KONECTA BPO SL</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Gestión de facturación</li>
+                <li>Resolución de incidencias</li>
+                <li>Venta telemática</li>
+                <li>Soporte técnico en sala</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Dependiente Comercial</h3>
+                <div class="experience-meta">
+                  <span>PADILLA CRESPO SL</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>Venta al por menor</li>
+                <li>Resolución de problemas técnicos</li>
+                <li>Gestión de múltiples líneas de producto</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Autónomo (Dueño) | Camarero</h3>
+                <div class="experience-meta">
+                  <span>HOSTELERÍA</span>
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Marketing y publicidad</li>
+                <li>Gestión contable básica</li>
+                <li>Atención y fidelización de clientes</li>
+                <li>Control de albaranes</li>
+                <li>Coordinación de equipos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2 class="section-title">Formación Académica</h2>
+        <div class="education-cards">
+          <div class="education-card">
+            <h3>CFGS Administración de Sistemas Informáticos en Red</h3>
+            <div class="education-meta">
+              <span>IES Rodrigo Caro (Coria del Río)</span>
+              <span>2024 - Actual</span>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <h3>Mediador de Seguros de Nivel 2</h3>
+            <div class="education-meta">
+              <span>Campus Asegurador</span>
+              <span>Mar-Abr 2024</span>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <h3>Bachillerato Ciencias Sociales</h3>
+            <div class="education-meta">
+              <span>IES Juan de Mairena</span>
+              <span>2009 - 2011</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="additional">
+        <h2 class="section-title">Información Adicional</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3><i class="fas fa-language"></i> Idiomas</h3>
+            <p>Inglés - Nivel intermedio (B1)</p>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-car"></i> Movilidad</h3>
+            <p>Carné de conducir B - Vehículo propio</p>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-heart"></i> Intereses</h3>
+            <div class="badges-container">
+              <span class="interactive-badge">Diseño Gráfico</span>
+              <span class="interactive-badge">Desarrollo</span>
+              <span class="interactive-badge">Streaming</span>
+              <span class="interactive-badge">Tecnología</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a href="https://github.com/Nando-Asir" target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a href="https://linkedin.com/in/duran-fernando" target="_blank"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a href="mailto:ferdurave@gmail.com"
+            ><i class="fas fa-envelope"></i> Email</a
+          >
+        </div>
+        <div class="contact-info">
+          <p>© 2025 Fernando Durán. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Interacción con los acordeones de experiencia
+      document.querySelectorAll(".experience-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const item = header.parentElement;
+          item.classList.toggle("active");
+
+          const icon = header.querySelector("i");
+          if (item.classList.contains("active")) {
+            icon.classList.remove("fa-chevron-down");
+            icon.classList.add("fa-chevron-up");
+          } else {
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+          }
+        });
+      });
+
+      // Animación de las barras de habilidades al aparecer
+      const animateSkills = () => {
+        document.querySelectorAll(".skill-level").forEach((bar) => {
+          const width = bar.style.width;
+          bar.style.width = "0";
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 100);
+        });
+      };
+
+      // Ejecutar cuando la página se carga
+      window.addEventListener("load", animateSkills);
+
+      // También animar al cambiar de tema
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        setTimeout(animateSkills, 300);
+      });
+
+      // Efecto hover en las tarjetas de educación
+      document
+        .querySelectorAll(".education-card, .info-card")
+        .forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)";
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
+          });
+        });
+
+      // Smooth scrolling para navegación interna
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          if (href.startsWith("#")) {
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
