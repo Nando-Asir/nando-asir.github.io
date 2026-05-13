@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wachuflow IT</title>
+  <meta
+    name="description"
+    content="Presentación profesional del proyecto Wachuflow IT: infraestructura empresarial segmentada con firewall, DMZ, VPN, Docker, DHCP y Active Directory."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <header class="hero" id="inicio">
+    <nav class="navbar">
+      <div class="brand">
+        <span class="brand-mark">W</span>
+        <span>Wachuflow IT</span>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#arquitectura">Arquitectura</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+        <li><a href="#flujo">Flujo</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content section">
+      <div class="eyebrow">Infraestructura IT Empresarial</div>
+      <h1>Wachuflow IT</h1>
+      <p class="hero-text">
+        Proyecto de infraestructura empresarial diseñado para ofrecer
+        <strong>segmentación de red, seguridad, administración remota y servicios internos</strong>
+        mediante una arquitectura clara, escalable y profesional.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#proyecto" class="btn btn-primary">¿Quiénes somos?</a>
+        <a href="#arquitectura" class="btn btn-secondary">Explorar arquitectura</a>
+      </div>
+
+      <div class="hero-stats">
+        <article class="stat-card">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Zonas de red</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Servicios clave</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Enfoque documental</span>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" id="proyecto">
+      <div class="section-heading">
+        <span class="section-tag">01</span>
+        <h2>¿Qué es Wachuflow IT?</h2>
+      </div>
+
+      <div class="content-grid two-columns">
+        <div class="glass-card">
+          <p>
+            <strong>Wachuflow IT</strong> es un proyecto con una web a nivel local, en pleno
+            desarrollo donde trabajan con una web en una red interna y se necesita cumplir
+            condiciones para que le aprueben el proyecto.
+          </p>
+          <p>
+            Su objetivo es diseñar una red organizada en distintas zonas, con servicios
+            especializados y medidas de seguridad que permitan separar el acceso externo,
+            la administración remota y la red interna corporativa.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3>Condiciones</h3>
+          <ul class="feature-list">
+            <li>Tiene que ser intermodular</li>
+            <li>No puede o debe contener tareas de clase</li>
+            <li>Tiene que tener red segmentada</li>
+            <li>Uso de alguna herramienta no vista en clase</li>
+            <li>Tiene que utilizar alguna cloud</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <span class="section-tag">02</span>
+        <h2>Necesidad que resuelve</h2>
+      </div>
+
+      <div class="content-grid three-columns">
+        <article class="glass-card">
+          <h3>Seguridad</h3>
+          <p>
+            Evita exponer la red interna directamente a Internet mediante una
+            arquitectura segmentada con firewall y DMZ.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Organización</h3>
+          <p>
+            Asigna a cada servidor una función concreta: gateway, apache-web,
+            DHCP, directorio activo y BBDD.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Administración</h3>
+          <p>
+            Se organiza de tal manera que técnicos y administradores operan
+            desde la LAN. El administrador de la infraestructura se le permite la conexión 
+            remota por VPN para no comprometer la infraestructura.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="arquitectura">
+      <div class="section-heading">
+        <span class="section-tag">03</span>
+        <h2>Arquitectura de red</h2>
+      </div>
+
+      <div class="glass-card architecture-card">
+        <div class="zones-grid">
+          <div class="zone zone-wan">
+            <span class="zone-title">WAN</span>
+            <p>Conexión a Internet recibida por el servidor principal mediante DHCP.</p>
+          </div>
+          <div class="zone zone-dmz">
+            <span class="zone-title">DMZ · 192.168.100.0/24</span>
+            <p>Zona destinada a servicios web, como el servidor web Apache dockerizado.</p>
+          </div>
+          <div class="zone zone-lan">
+            <span class="zone-title">LAN · 192.168.200.0/24</span>
+            <p>Red interna con el servidor DHCP, Active Directory y equipos cliente.</p>
+          </div>
+          <div class="zone zone-vpn">
+            <span class="zone-title">VPN · 10.0.0.0/24</span>
+            <p>Acceso remoto seguro para el administrador mediante WireGuard.</p>
+          </div>
+        </div>
+
+        <div class="diagram-flow">
+          <div class="flow-box">Internet</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-box highlight-box">Servidor Principal<br><small>Debian 13 · Firewall · VPN</small></div>
+          <div class="flow-split">
+            <div>
+              <div class="flow-arrow">↙</div>
+              <div class="flow-box">DMZ<br><small>Servidor Web 192.168.100.10</small></div>
+            </div>
+            <div>
+              <div class="flow-arrow">↘</div>
+              <div class="flow-box">LAN<br><small>DHCP · AD · Clientes</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="componentes">
+      <div class="section-heading">
+        <span class="section-tag">04</span>
+        <h2>Componentes principales</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item glass-card">
+          <div class="timeline-number">01</div>
+          <div>
+            <h3>Servidor principal</h3>
+            <p>
+              Basado en <strong>Debian 13</strong>, actúa como router, firewall y punto
+              central de la infraestructura. Gestiona las interfaces WAN, LAN y DMZ.
+            </p>
+            <ul>
+              <li>Firewall con <strong>nftables</strong></li>
+              <li>VPN segura con <strong>WireGuard</strong></li>
+              <li>Preparado para <strong>Telegraf</strong>, <strong>CasaOS</strong> y <strong>Dockge</strong></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-number">02</div>
+          <div>
+            <h3>Servidor web en DMZ</h3>
+            <p>
+              Servidor <strong>Debian 13</strong> ubicado en la red DMZ con
+              <strong>Apache en Docker</strong>, accesible desde VPN y LAN
+              mediante reglas DNAT del firewall.
+            </p>
+            <ul>
+              <li>IP estática: <strong>192.168.100.10</strong></li>
+              <li>Publicación de la web corporativa IT</li>
+              <li>Separación respecto a la LAN para mayor seguridad</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-number">03</div>
+          <div>
+            <h3>Servidor DHCP</h3>
+            <p>
+              Servicio encargado de asignar direcciones IP dinámicas a los equipos
+              de la LAN en el rango <strong>192.168.200.100 - 192.168.200.200</strong>.
+            </p>
+            <ul>
+              <li>Servidor Debian 13</li>
+              <li>IP fija: <strong>192.168.200.10</strong></li>
+              <li>Automatiza la gestión de clientes de red</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-number">04</div>
+          <div>
+            <h3>Active Directory</h3>
+            <p>
+              Implementado en <strong>Windows Server 2022</strong> como controlador
+              de dominio para gestionar usuarios, grupos y políticas.
+            </p>
+            <ul>
+              <li>Dominio: <strong>wachuflow.local</strong></li>
+              <li>IP fija: <strong>192.168.200.20</strong></li>
+              <li>Grupos principales: <strong>Administradores</strong> y <strong>Técnicos</strong></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-number">05</div>
+          <div>
+            <h3>Base de Datos</h3>
+            <p>
+              Implementado en <strong>AWS - RDS</strong> con motor de <strong>MySQL</strong>
+              y conexión vía <strong>API</strong> con el servidor Web.
+            </p>
+            <ul>
+              <li>Tablas: <strong>usuarios</strong></li>
+              <li>Capacidad: <strong>20 GB</strong></li>
+              <li>Backups: <strong>diarios y gestionados por AWS</strong></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <span class="section-tag">05</span>
+        <h2>Tecnologías utilizadas</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-pill">Debian 13</div>
+        <div class="tech-pill">Windows Server 2022</div>
+        <div class="tech-pill">nftables</div>
+        <div class="tech-pill">WireGuard</div>
+        <div class="tech-pill">Docker</div>
+        <div class="tech-pill">Apache HTTPD</div>
+        <div class="tech-pill">isc-dhcp-server</div>
+        <div class="tech-pill">Active Directory</div>
+        <div class="tech-pill">Telegraf · InfluxDB</div>
+        <div class="tech-pill">CasaOS</div>
+        <div class="tech-pill">Dockge</div>
+        <div class="tech-pill">HTML · CSS · JavaScript</div>
+        <div class="tech-pill">Grafana</div>
+        <div class="tech-pill">MySQL · MariaDB</div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="seguridad">
+      <div class="section-heading">
+        <span class="section-tag">06</span>
+        <h2>Seguridad y políticas de comunicación</h2>
+      </div>
+
+      <div class="content-grid two-columns">
+        <div class="glass-card">
+          <h3>Reglas clave del firewall</h3>
+          <ul class="feature-list">
+            <li><strong>Internet → DMZ:</strong> permitido solo RDS - AWS</li>
+            <li><strong>Internet → LAN:</strong> bloqueado</li>
+            <li><strong>LAN → Internet:</strong> permitido</li>
+            <li><strong>LAN → DMZ:</strong> permitido</li>
+            <li><strong>DMZ → LAN:</strong> bloqueado</li>
+            <li><strong>VPN → LAN y DMZ:</strong> permitido para administración</li>
+          </ul>
+        </div>
+
+        <div class="glass-card">
+          <h3>Ventajas de este enfoque</h3>
+          <ul class="feature-list">
+            <li>Aislamiento del servidor público respecto a la red interna</li>
+            <li>Control estricto del tráfico entre zonas</li>
+            <li>Acceso remoto seguro para personal autorizado</li>
+            <li>Mayor facilidad para escalar la infraestructura</li>
+            <li>Diseño alineado con entornos empresariales reales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="flujo">
+      <div class="section-heading">
+        <span class="section-tag">07</span>
+        <h2>Flujo de funcionamiento</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card glass-card">
+          <span class="step-index">1</span>
+          <h3>Conexión VPN</h3>
+          <p>
+            Una petición a través de VPN llega por la interfaz del servidor principal.
+          </p>
+        </article>
+
+        <article class="step-card glass-card">
+          <span class="step-index">2</span>
+          <h3>Inspección del firewall</h3>
+          <p>
+            nftables analiza el tráfico y solo redirige el permitido hacia la DMZ.
+          </p>
+        </article>
+
+        <article class="step-card glass-card">
+          <span class="step-index">3</span>
+          <h3>Publicación del servicio web</h3>
+          <p>
+            El servidor Apache en Docker atiende las peticiones a la web corporativa.
+          </p>
+        </article>
+
+        <article class="step-card glass-card">
+          <span class="step-index">4</span>
+          <h3>Conexión vía API</h3>
+          <p>
+            El contenedor de Apache está coenctado vía API a la BBDD.
+          </p>
+        </article>
+
+        <article class="step-card glass-card">
+          <span class="step-index">5</span>
+          <h3>Creación de usuarios</h3>
+          <p>
+            Si se crea un usuario web, éste se queda guardado en la BBDD.
+          </p>
+        </article>
+
+        <article class="step-card glass-card">
+          <span class="step-index">6</span>
+          <h3>Gestión y escalabilidad</h3>
+          <p>
+            La infraestructura está preparada para monitorización y gestión visual con Dockge y CasaOS.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <span class="section-tag">08</span>
+        <h2>Valor del proyecto</h2>
+      </div>
+
+      <div class="content-grid three-columns">
+        <article class="glass-card">
+          <h3>Realismo técnico</h3>
+          <p>
+            Reproduce una infraestructura coherente con necesidades empresariales reales.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Enfoque profesional</h3>
+          <p>
+            Combina red, seguridad, virtualización, servicios y documentación estructurada.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Escalabilidad</h3>
+          <p>
+            Puede evolucionar fácilmente con nuevas capas de monitorización, automatización y backend.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <span class="section-tag">09</span>
+        <h2>Estado actual y evolución futura</h2>
+      </div>
+
+      <div class="content-grid two-columns">
+        <div class="glass-card">
+          <h3>Estado del proyecto</h3>
+          <p>
+            La documentación principal, la arquitectura de red, el firewall y la VPN
+            aparecen definidos y estructurados. Además, se contempla el despliegue del
+            servidor web, DHCP, Active Directory y herramientas de gestión.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3>Mejoras futuras</h3>
+          <ul class="feature-list">
+            <li>Completar el despliegue operativo de todos los servicios</li>
+            <li>Integrar monitorización completa con métricas visibles</li>
+            <li>Publicar la web a internet</li>
+            <li>Automatizar tareas de despliegue y configuración</li>
+            <li>Endurecer aún más políticas y controles de acceso</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="conclusion">
+      <div class="section-heading">
+        <span class="section-tag">10</span>
+        <h2>Conclusión</h2>
+      </div>
+
+      <div class="glass-card conclusion-card">
+        <p>
+          <strong>Wachuflow IT</strong> no es solo una página web, sino una propuesta
+          integral de infraestructura empresarial que combina
+          <strong>segmentación de red, seguridad perimetral, servicios internos y administración remota segura</strong>.
+        </p>
+        <p>
+          El proyecto demuestra conocimientos de redes, sistemas, despliegue de servicios,
+          documentación técnica y diseño de soluciones orientadas a entornos profesionales.
+        </p>
+        <p class="closing-line">
+          En resumen, Wachuflow IT presenta una arquitectura sólida, clara y escalable,
+          preparada para crecer y adaptarse a necesidades reales.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Wachuflow IT · Fernando Durán Avellaneda</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
