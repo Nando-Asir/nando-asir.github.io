@@ -304,3 +304,41 @@ if (navAnchors.length) {
     });
   });
 })();
+
+/* ==========================================================================
+   CAPA 3 · TRANSICIONES
+   ========================================================================== */
+
+(() => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Título palabra a palabra */
+  if (!reduceMotion) {
+    document.querySelectorAll("h1").forEach((h1) => {
+      if (h1.children.length) return;
+      const words = h1.textContent.trim().split(/\s+/);
+      h1.setAttribute("aria-label", h1.textContent.trim());
+      h1.textContent = "";
+      words.forEach((word, i) => {
+        const span = document.createElement("span");
+        span.className = "word";
+        span.setAttribute("aria-hidden", "true");
+        span.style.setProperty("--w", i);
+        span.textContent = word;
+        h1.appendChild(span);
+        if (i < words.length - 1) h1.appendChild(document.createTextNode(" "));
+      });
+    });
+  }
+
+  /* Pestañas de skills: el panel entra desde el lado hacia el que avanzas */
+  const tabs = [...document.querySelectorAll(".switch-btn")];
+  let current = tabs.findIndex((t) => t.classList.contains("active"));
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
+      const panel = document.querySelector(`[data-skill-panel="${tab.dataset.skillTarget}"]`);
+      if (panel) panel.style.setProperty("--dir", i >= current ? "18px" : "-18px");
+      current = i;
+    });
+  });
+})();
