@@ -381,18 +381,15 @@
         <span>Fernando Durán</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cv.html" class="active">CV</a></li>
-        <li><a href="temario.html">Temario</a></li>
+        <li><a href="index.html#perfil">Perfil</a></li>
+        <li><a href="index.html#experiencia">Experiencia</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#proyectos">Proyectos</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
+        <li class="nav-sep" aria-hidden="true"></li>
+        <li><a href="cv.html" class="nav-cta active">CV</a></li>
+        <li><a href="temario.html">Temario</a></li>
       </ul>
     </nav>
 
@@ -402,17 +399,18 @@
           <span class="cv-label">Curriculum Vitae</span>
           <h1 class="cv-title">Fernando Durán</h1>
           <p class="cv-subtitle">
-            Perfil junior orientado a <strong>sistemas, redes, infraestructura,
-            monitorización y despliegue de servicios</strong>. Con base práctica
-            en Linux, Windows, scripting, virtualización, Docker, Active Directory
-            y herramientas de observabilidad. Técnico Superior en ASIR y actualmente
-            cursando el <strong>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>.
+            <strong>SysAdmin / DevOps Junior</strong> · Sevilla. Técnico de Soporte N1 en Ayesa,
+            titulado en ASIR, certificado <strong>CCNA1</strong> y estudiante de DAM.
+            Linux, redes, Docker y automatización con Python y Bash.
+          </p>
+          <p class="print-only print-contact">
+            ferdurave@gmail.com · linkedin.com/in/duran-fernando · github.com/Nando-Asir · nando-asir.github.io · Sevilla
           </p>
 
           <div class="cv-actions">
-            <a href="index.html" class="btn btn-primary">Volver al portfolio</a>
-            <a href="temario.html" class="btn btn-secondary">Ver temario</a>
-            <a href="mailto:ferdurave@gmail.com" class="btn btn-ghost">Contactar</a>
+            <button type="button" class="btn btn-primary" id="printCv">Descargar CV (PDF)</button>
+            <a href="mailto:ferdurave@gmail.com" class="btn btn-secondary">Contactar</a>
+            <a href="https://linkedin.com/in/duran-fernando" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
           </div>
         </section>
 
@@ -420,13 +418,14 @@
           <div>
             <span class="cv-label">Perfil</span>
             <div class="cv-tags">
-              <span class="cv-badge highlight">Junior IT</span>
+              <span class="cv-badge highlight">CCNA1</span>
               <span class="cv-badge">Linux</span>
+              <span class="cv-badge">Windows Server</span>
               <span class="cv-badge">Redes</span>
               <span class="cv-badge">Docker</span>
-              <span class="cv-badge">Windows Server</span>
-              <span class="cv-badge">Monitorización</span>
-              <span class="cv-badge">C#</span>
+              <span class="cv-badge">Ansible</span>
+              <span class="cv-badge">Python</span>
+              <span class="cv-badge">C# / Blazor</span>
               <span class="cv-badge">Grafana</span>
             </div>
           </div>
@@ -441,127 +440,99 @@
 
           <div class="skill-group">
             <h3>Sistemas</h3>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Linux (Debian / Ubuntu)</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Windows Server</span>
-                <span>75%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Virtualización / Proxmox</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
+            <div class="cv-badges">
+              <span class="cv-badge">Linux (Debian, Ubuntu)</span>
+              <span class="cv-badge">Windows Server</span>
+              <span class="cv-badge">Active Directory</span>
+              <span class="cv-badge">SSH</span>
+              <span class="cv-badge">PowerShell</span>
             </div>
           </div>
 
           <div class="skill-group">
-            <h3>Redes e infraestructura</h3>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Cisco y switching/routing</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>IPv4 / IPv6 / subnetting</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Docker / despliegue</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
+            <h3>Redes</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">TCP/IP</span>
+              <span class="cv-badge">VLAN</span>
+              <span class="cv-badge">DHCP</span>
+              <span class="cv-badge">NAT</span>
+              <span class="cv-badge">DNS</span>
+              <span class="cv-badge">VPN (WireGuard, OpenVPN)</span>
+              <span class="cv-badge">Cisco · CCNA1</span>
             </div>
           </div>
 
           <div class="skill-group">
-            <h3>Desarrollo y automatización</h3>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>C# / Windows Forms</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Bash / scripting</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>HTML / CSS / JavaScript</span>
-                <span>82%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 82%"></div>
-              </div>
+            <h3>Cloud y virtualización</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">AWS</span>
+              <span class="cv-badge">Proxmox</span>
+              <span class="cv-badge">KVM</span>
+              <span class="cv-badge">VirtualBox</span>
             </div>
           </div>
 
           <div class="skill-group">
-            <h3>Monitorización y datos</h3>
-
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>Telegraf / InfluxDB / Grafana</span>
-                <span>72%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 72%"></div>
-              </div>
+            <h3>Contenedores, DevOps e IaC</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">Docker</span>
+              <span class="cv-badge">Docker Compose</span>
+              <span class="cv-badge">Kubernetes</span>
+              <span class="cv-badge">Ansible</span>
+              <span class="cv-badge">Terraform</span>
+              <span class="cv-badge">Jenkins</span>
+              <span class="cv-badge">Git / GitHub</span>
             </div>
+          </div>
 
-            <div class="skill-meter-item">
-              <div class="skill-row">
-                <span>SQL / bases de datos</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-meter">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
+          <div class="skill-group">
+            <h3>Servicios</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">Apache</span>
+              <span class="cv-badge">Nginx</span>
+              <span class="cv-badge">proxy inverso</span>
+              <span class="cv-badge">Postfix</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Ciberseguridad</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">pfSense</span>
+              <span class="cv-badge">NFTables</span>
+              <span class="cv-badge">Suricata</span>
+              <span class="cv-badge">GPG</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Monitorización</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">Prometheus</span>
+              <span class="cv-badge">Grafana</span>
+              <span class="cv-badge">Telegraf</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Bases de datos</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">MySQL</span>
+              <span class="cv-badge">SQL Server</span>
+              <span class="cv-badge">Oracle (SQL, PL/SQL)</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Desarrollo</h3>
+            <div class="cv-badges">
+              <span class="cv-badge">C#</span>
+              <span class="cv-badge">Blazor</span>
+              <span class="cv-badge">DevExpress</span>
+              <span class="cv-badge">Python</span>
+              <span class="cv-badge">Bash</span>
+              <span class="cv-badge">HTML / CSS / JavaScript</span>
+              <span class="cv-badge">WordPress</span>
             </div>
           </div>
         </section>
@@ -583,8 +554,12 @@
           <h2>Información adicional</h2>
           <div class="info-list">
             <div class="info-item">
+              <strong>Ubicación</strong>
+              <span>Sevilla</span>
+            </div>
+            <div class="info-item">
               <strong>Idiomas</strong>
-              <span>Inglés · Nivel intermedio (B1)</span>
+              <span>Español nativo · Inglés intermedio (B2)</span>
             </div>
             <div class="info-item">
               <strong>Movilidad</strong>
@@ -592,7 +567,7 @@
             </div>
             <div class="info-item">
               <strong>Intereses</strong>
-              <p>Infraestructura, monitorización, automatización, documentación técnica y mejora de servicios.</p>
+              <p>Automatización, administración de servidores, desarrollo web, hardware y aprendizaje autodidacta.</p>
             </div>
           </div>
         </section>
@@ -602,11 +577,10 @@
         <section class="glass-card cv-block reveal">
           <h2>Resumen profesional</h2>
           <p class="timeline-note">
-            He consolidado un perfil junior con base práctica en administración
-            de sistemas, redes, virtualización, servicios y monitorización.
-            Me interesa incorporarme a un entorno profesional donde seguir creciendo
-            técnicamente y participar en tareas reales relacionadas con infraestructura,
-            soporte, automatización y despliegue.
+            Técnico en ASIR con experiencia en soporte técnico y automatización de tareas con
+            Python y Bash. Especializado en Linux, administración de sistemas y redes, y
+            digitalización de procesos con OCR e IA. Resolutivo, autónomo y acostumbrado
+            al trabajo remoto.
           </p>
         </section>
 
@@ -616,64 +590,55 @@
           <article class="glass-card experience-card featured">
               <div class="experience-head">
                 <div>
-                  <div class="experience-company">AYESA</div>
-                  <h3 class="experience-role">Técnico SAR</h3>
-                  <div class="experience-meta">Experiencia profesional · Administración y Soporte</div>
+                  <div class="experience-company">Ayesa Servicios Digitales</div>
+                  <h3 class="experience-role">Técnico de Soporte Nivel 1</h3>
+                  <div class="experience-meta">Septiembre 2026 – Actualidad</div>
                 </div>
-                <span class="featured-pill">Experiencia reciente</span>
+                <span class="featured-pill">Actual</span>
               </div>
 
-              <p>
-                Soporte, administración y resolución de incidencias en sistemas y redes corporativas, garantizando el correcto funcionamiento y la alta disponibilidad de los servicios tecnológicos.
-              </p>
-
               <div class="experience-tags">
-                <span class="experience-tag highlight">Soporte TI</span>
-                <span class="experience-tag highlight">Administración de Redes</span>
+                <span class="experience-tag highlight">Soporte N1</span>
+                <span class="experience-tag highlight">Ticketing</span>
                 <span class="experience-tag">Linux</span>
-                <span class="experience-tag">Alta Disponibilidad</span>
-                <span class="experience-tag">SSH</span>
+                <span class="experience-tag">Windows</span>
+                <span class="experience-tag">Redes</span>
               </div>
 
               <ul>
-                <li>Atención, diagnóstico y resolución de incidencias en infraestructuras de red y sistemas mediante <strong>ticketing</strong>.</li>
-                <li>Gestión y mantenimiento operativo de servidores en entornos <strong>Linux</strong>.</li>
-                <li>Monitorización para asegurar la <strong>Seguridad y Alta Disponibilidad</strong> de los sistemas críticos.</li>
-                <li>Elaboración de <strong>documentación técnica y resúmenes</strong> de procedimientos operativos para facilitar la resolución de problemas recurrentes al equipo.</li>
+                <li>Gestión de <strong>tickets y escalados</strong>.</li>
+                <li>Soporte mediante <strong>asistencia remota</strong> y gestión de conectividad.</li>
+                <li>Diagnóstico de <strong>hardware de servidores</strong> e infraestructuras de red.</li>
+                <li>Administración de sistemas <strong>Linux y Windows</strong>.</li>
+                <li>Gestión de la experiencia de usuario.</li>
               </ul>
             </article>
 
             <article class="glass-card experience-card">
               <div class="experience-head">
                 <div>
-                  <div class="experience-company">Teamwork Solutions SL</div>
-                  <h3 class="experience-role">Prácticas de desarrollo y sistemas</h3>
-                  <div class="experience-meta">Experiencia destacada · Entorno técnico aplicado</div>
+                  <div class="experience-company">Teamwork Solutions</div>
+                  <h3 class="experience-role">Administrador de Sistemas y Desarrollo · Prácticas duales</h3>
+                  <div class="experience-meta">Febrero 2026 – Mayo 2026</div>
                 </div>
               </div>
 
-              <p>
-                Participación en tareas técnicas orientadas a desarrollo,
-                automatización y monitorización, combinando programación de escritorio
-                con herramientas de observabilidad y gestión de servicios.
-              </p>
-
               <div class="experience-tags">
                 <span class="experience-tag highlight">C#</span>
-                <span class="experience-tag highlight">Windows Forms</span>
-                <span class="experience-tag">Tareas de Windows</span>
-                <span class="experience-tag">InfluxDB</span>
+                <span class="experience-tag highlight">Blazor</span>
+                <span class="experience-tag">DevExpress</span>
+                <span class="experience-tag">SQL Server</span>
+                <span class="experience-tag">Docker Compose</span>
+                <span class="experience-tag">Prometheus</span>
                 <span class="experience-tag">Grafana</span>
-                <span class="experience-tag">Telegraf</span>
               </div>
 
               <ul>
-                <li>Desarrollo de funcionalidades y herramientas con <strong>C#</strong>.</li>
-                <li>Trabajo con interfaces y lógica de escritorio mediante <strong>Windows Forms</strong>.</li>
-                <li>Configuración y uso de <strong>tareas programadas de Windows</strong> para automatización de procesos.</li>
-                <li>Participación en entornos de <strong>monitorización y observabilidad</strong>.</li>
-                <li>Trabajo con <strong>InfluxDB, Grafana y Telegraf</strong> para recogida y visualización de métricas.</li>
-                <li>Refuerzo de una base práctica en integración entre sistemas, monitorización y operativa técnica.</li>
+                <li>Desarrollo con <strong>C# y Blazor</strong> utilizando DevExpress.</li>
+                <li>Administración de bases de datos en <strong>SQL Server</strong>.</li>
+                <li>Administración de sistemas Linux y <strong>Windows Server (TSPlus)</strong>.</li>
+                <li>Despliegue de servicios con <strong>Docker Compose</strong> (CasaOS).</li>
+                <li>Implementación de monitorización con <strong>Telegraf, Prometheus y Grafana</strong>.</li>
               </ul>
             </article>
 
@@ -681,22 +646,21 @@
               <div class="experience-head">
                 <div>
                   <div class="experience-company">Universidad de Sevilla</div>
-                  <h3 class="experience-role">Técnico de digitalización y gestión de datos · Práctica dual</h3>
-                  <div class="experience-meta">Entorno documental y tratamiento de información</div>
+                  <h3 class="experience-role">Técnico de Digitalización y Gestión de Datos · Prácticas duales</h3>
+                  <div class="experience-meta">Abril 2025 – Mayo 2025</div>
                 </div>
               </div>
 
               <ul>
-                <li>Descarga masiva y clasificación estructurada de documentos.</li>
-                <li>Aplicación de tecnologías OCR e IA para digitalización y transcripción automática de textos.</li>
-                <li>Actualización continua de datasets en Excel para seguimiento del trabajo.</li>
-                <li>Trabajo coordinado en equipo remoto.</li>
+                <li>Digitalización automática de documentos con tecnologías <strong>OCR e IA</strong>.</li>
+                <li>Automatización del almacenamiento en <strong>Google Drive</strong>.</li>
+                <li>Mantenimiento de datasets en Excel y trabajo remoto colaborativo.</li>
               </ul>
             </article>
           </div>
         </section>
 
-        <section class="cv-block reveal">
+        <section class="cv-block reveal cv-other">
           <h2>Otra experiencia profesional</h2>
 
           <div class="expandable-work" id="expandableWork">
@@ -811,6 +775,24 @@
         </section>
 
         <section class="glass-card cv-block reveal">
+          <h2>Certificaciones</h2>
+          <div class="education-list">
+            <article class="education-item">
+              <h3>CCNA1 · Introduction to Networks</h3>
+              <div class="education-meta">Cisco Networking Academy · Junio 2025</div>
+            </article>
+            <article class="education-item">
+              <h3>Curso de PowerShell</h3>
+              <div class="education-meta">OpenWebinars · Diciembre 2025</div>
+            </article>
+            <article class="education-item">
+              <h3>Curso de Inteligencia Artificial</h3>
+              <div class="education-meta">OpenWebinars · Diciembre 2025</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="glass-card cv-block reveal">
           <h2>Formación académica</h2>
 
           <div class="education-list">
@@ -825,7 +807,7 @@
 
             <article class="education-item">
               <h3>CFGS Administración de Sistemas Informáticos en Red</h3>
-              <div class="education-meta">IES Rodrigo Caro (Coria del Río) · 2024 - 2026 · Titulación obtenida</div>
+              <div class="education-meta">IES Rodrigo Caro (Coria del Río) · 2024 – Mayo 2026 · Titulado</div>
               <p>
                 Formación orientada a sistemas, redes, bases de datos, virtualización,
                 servicios, documentación técnica e infraestructura IT.
@@ -852,9 +834,7 @@
           <span class="cv-label">Contacto</span>
           <h2>¿Quieres contactar conmigo?</h2>
           <p class="final-contact-text">
-            Puedes escribirme por correo o revisar mis perfiles y proyectos.
-            También puedes volver al portfolio principal o consultar el temario
-            para ver el material académico que complementa mi perfil técnico.
+            Escríbeme por correo o LinkedIn, o descarga este CV en PDF.
           </p>
         </div>
 
@@ -862,32 +842,32 @@
           <a href="mailto:ferdurave@gmail.com" class="btn btn-primary">Email</a>
           <a href="https://github.com/Nando-Asir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
           <a href="https://linkedin.com/in/duran-fernando" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
-          <a href="temario.html" class="btn btn-ghost">Temario</a>
+          <button type="button" class="btn btn-ghost" data-print>Descargar PDF</button>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p>Fernando Durán · CV · Junior Systems & Infrastructure Candidate</p>
+      <p>Fernando Durán · SysAdmin / DevOps Junior · Sevilla</p>
     </footer>
   </div>
 
   <script src="script.js"></script>
   <script>
-    const skillBars = document.querySelectorAll(".skill-level");
-
-    const animateSkillBars = () => {
-      skillBars.forEach((bar) => {
-        const finalWidth = bar.style.width;
-        bar.style.width = "0";
-
-        setTimeout(() => {
-          bar.style.width = finalWidth;
-        }, 150);
-      });
+    /* Descargar CV: abre el diálogo de impresión con "Guardar como PDF".
+       El diseño de impresión (fondo blanco, sin menús) está en styles.css */
+    const printCv = () => {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+      window.print();
     };
 
-    window.addEventListener("load", animateSkillBars);
+    document.querySelectorAll("#printCv, [data-print]").forEach((btn) =>
+      btn.addEventListener("click", printCv)
+    );
+
+    if (new URLSearchParams(location.search).get("pdf") === "1") {
+      window.addEventListener("load", () => setTimeout(printCv, 600));
+    }
 
     const expandableWork = document.getElementById("expandableWork");
     const expandableToggle = document.getElementById("expandableToggle");
