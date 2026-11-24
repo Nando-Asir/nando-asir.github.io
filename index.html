@@ -93,6 +93,7 @@
             <span>Ansible</span>
             <span>Python</span>
             <span>C#</span>
+            <span>Homelab</span>
           </div>
         </aside>
       </div>
@@ -288,6 +289,34 @@
       </div>
 
       <div class="projects-grid" id="projectsGrid">
+        <article class="project-card glass-card featured-project homelab-project reveal" data-category="infra">
+          <div class="project-top">
+            <span class="project-badge featured-badge">Proyecto personal · En producción</span>
+            <span class="project-category">Homelab</span>
+          </div>
+          <h3>Nube privada autoalojada</h3>
+          <p>
+            Servidor Debian 13 sin entorno gráfico en un equipo reutilizado, que administro en remoto por SSH.
+            Aloja Nextcloud para uso familiar, con acceso por VPN WireGuard y Cloudflare Tunnel, cortafuegos
+            UFW y Fail2Ban, base de datos MariaDB y gestión de usuarios, permisos y actualizaciones.
+          </p>
+          <ul class="homelab-points">
+            <li><strong>Copias automatizadas por niveles:</strong> base de datos y configuración a diario (7 días) y datos cada semana (4 semanas).</li>
+            <li><strong>Incidencias resueltas:</strong> versiones de PHP, configuración del túnel, permisos de <code>mysqldump</code> y copias escritas en la partición equivocada.</li>
+          </ul>
+          <div class="project-tech">
+            <span>Debian</span>
+            <span>Nextcloud</span>
+            <span>MariaDB</span>
+            <span>WireGuard</span>
+            <span>Cloudflare Tunnel</span>
+            <span>UFW</span>
+            <span>Fail2Ban</span>
+            <span>Bash</span>
+            <span>cron</span>
+          </div>
+        </article>
+
         <article class="project-card glass-card featured-project reveal" data-category="infra web">
           <div class="project-top">
             <span class="project-badge featured-badge">Proyecto más destacado</span>
