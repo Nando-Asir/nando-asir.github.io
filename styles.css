@@ -1618,3 +1618,29 @@ a,
     linear-gradient(135deg, rgba(255, 122, 69, 0.1), rgba(197, 248, 42, 0.03)),
     var(--glass-bg);
 }
+
+/* Perfil resumido */
+.profile-title {
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: 18px;
+}
+
+.profile-title span {
+  background: linear-gradient(120deg, var(--lime), #e3ff8a 60%, var(--coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-lead {
+  font-size: 1.08rem;
+  margin-bottom: 0;
+}
+
+.profile-layout .glass-card:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
