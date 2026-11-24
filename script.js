@@ -144,3 +144,163 @@ if (navAnchors.length) {
   window.addEventListener("scroll", updateActiveNav);
   window.addEventListener("load", updateActiveNav);
 }
+
+/* ==========================================================================
+   CAPA 2 · CRISTAL Y DINAMISMO
+   ========================================================================== */
+
+(() => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  /* --- Menú móvil: icono animado, cerrar al tocar fuera o con Escape --- */
+  const toggle = document.getElementById("menuToggle");
+  const links = document.getElementById("navLinks");
+
+  if (toggle && links) {
+    const sync = () => {
+      const open = links.classList.contains("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    };
+
+    new MutationObserver(sync).observe(links, { attributes: true, attributeFilter: ["class"] });
+    sync();
+
+    document.addEventListener("click", (e) => {
+      if (links.classList.contains("open") && !links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove("open");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") links.classList.remove("open");
+    });
+  }
+
+  /* --- Barra de progreso y navbar de cristal al hacer scroll --- */
+  const navbar = document.querySelector(".navbar");
+  const progress = document.createElement("div");
+  progress.className = "scroll-progress";
+  document.body.appendChild(progress);
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+      if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 20);
+      ticking = false;
+    });
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* --- Apariciones escalonadas con IntersectionObserver --- */
+  const groups = [".hero-stats", ".projects-grid", ".three-columns", ".academic-grid", ".two-columns"];
+  groups.forEach((sel) => {
+    document.querySelectorAll(sel).forEach((group) => {
+      [...group.children].forEach((child, i) => {
+        child.classList.add("reveal");
+        child.style.setProperty("--delay", `${Math.min(i, 6) * 80}ms`);
+      });
+    });
+  });
+
+  const revealables = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    );
+    revealables.forEach((el) => io.observe(el));
+  } else {
+    revealables.forEach((el) => el.classList.add("visible"));
+  }
+
+  /* --- Pastillas de skills: entrada en cascada --- */
+  document.querySelectorAll(".skill-list").forEach((list) => {
+    [...list.children].forEach((pill, i) => pill.style.setProperty("--i", i));
+  });
+
+  /* --- Filtro de proyectos: animar las tarjetas que aparecen --- */
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".project-card:not(.hidden)").forEach((card) => {
+        card.classList.remove("fade-in", "reveal");
+        void card.offsetWidth;
+        card.classList.add("fade-in");
+      });
+    });
+  });
+
+  /* --- Solo escritorio con ratón: luz del cursor, reflejos e inclinación 3D --- */
+  if (!finePointer || reduceMotion) return;
+
+  const light = document.createElement("div");
+  light.className = "cursor-light";
+  document.body.appendChild(light);
+
+  let lx = 0, ly = 0, tx = 0, ty = 0, running = false;
+  const follow = () => {
+    lx += (tx - lx) * 0.12;
+    ly += (ty - ly) * 0.12;
+    light.style.transform = `translate(${lx}px, ${ly}px)`;
+    if (Math.abs(tx - lx) > 0.5 || Math.abs(ty - ly) > 0.5) {
+      requestAnimationFrame(follow);
+    } else {
+      running = false;
+    }
+  };
+
+  window.addEventListener("pointermove", (e) => {
+    tx = e.clientX;
+    ty = e.clientY;
+    light.classList.add("on");
+    if (!running) {
+      running = true;
+      requestAnimationFrame(follow);
+    }
+  }, { passive: true });
+
+  document.addEventListener("pointerleave", () => light.classList.remove("on"));
+
+  const tiltCards = document.querySelectorAll(
+    ".project-card, .subject-card, .stat-card, .value-card, .hero-panel, .experience-card"
+  );
+  const glowCards = document.querySelectorAll(".glass-card, .stat-card");
+
+  glowCards.forEach((card) => {
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      card.style.setProperty("--my", `${e.clientY - r.top}px`);
+    });
+  });
+
+  tiltCards.forEach((card) => {
+    card.addEventListener("pointerenter", () => {
+      card.style.transition = "transform 0.15s ease-out, box-shadow 0.45s ease";
+    });
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(900px) rotateX(${(-py * 5).toFixed(2)}deg) rotateY(${(px * 6).toFixed(2)}deg) translateY(-4px)`;
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.transition = "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease";
+      card.style.transform = "";
+    });
+  });
+})();
