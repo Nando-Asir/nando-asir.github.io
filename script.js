@@ -464,3 +464,6 @@ if (navAnchors.length) {
   fromHash();
   window.addEventListener("hashchange", fromHash);
 })();
+
+/* Safari en iPhone solo aplica :active al tocar si hay un escuchador táctil */
+document.addEventListener("touchstart", () => {}, { passive: true });
