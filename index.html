@@ -38,88 +38,57 @@
         <span>Fernando Durán</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#valor">Valor</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li class="nav-sep" aria-hidden="true"></li>
+        <li><a href="cv.html" class="nav-cta">CV</a></li>
+        <li><a href="temario.html">Temario</a></li>
       </ul>
     </nav>
 
     <div class="hero-content section">
       <div class="hero-layout">
         <div>
-          <div class="eyebrow">Técnico ASIR · Cursando DAM · SysAdmin / DevOps Junior</div>
+          <div class="eyebrow">SysAdmin / DevOps Junior · Sevilla</div>
 
           <h1>Perfil técnico que une sistemas, infraestructura y desarrollo de aplicaciones.</h1>
 
           <p class="hero-text">
-            Soy <strong>Fernando Durán</strong>, <strong>Técnico Superior en ASIR</strong>, y actualmente curso el
-            <strong>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>.
-            Me especializo en <strong>administración de sistemas, redes, soporte técnico, virtualización, contenedores y despliegue de servicios</strong>,
-            y amplío mi perfil hacia el <strong>desarrollo de software</strong>.
-            Estoy disponible para incorporarme como perfil junior y aportar base técnica,
-            capacidad de aprendizaje, organización y mejora continua.
+            Técnico de Soporte N1 en <strong>Ayesa</strong>, titulado en <strong>ASIR</strong>
+            y estudiante de <strong>DAM</strong>. Linux, redes, Docker y automatización con Python y Bash.
           </p>
 
           <div class="hero-actions">
-            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="#experiencia" class="btn btn-primary">Ver experiencia</a>
             <a href="cv.html" class="btn btn-secondary">Ver CV</a>
-            <a href="temario.html" class="btn btn-ghost">Ver temario</a>
+            <a href="cv.html?pdf=1" class="btn btn-ghost">Descargar CV (PDF)</a>
           </div>
         </div>
 
         <aside class="hero-panel glass-card highlight-panel reveal">
-          <span class="panel-label">Perfil destacado</span>
-          <h3>Perfil profesional orientado a empleabilidad técnica</h3>
-          <p>
-            He trabajado en proyectos y prácticas con Linux, redes, Docker, Active Directory,
-            virtualización, scripting y documentación técnica. En este portfolio muestro
-            evidencias reales para facilitar una evaluación rápida del perfil y stack técnico.
-          </p>
+          <span class="panel-label">En resumen</span>
+          <ul class="facts">
+            <li><span>Actualmente</span><strong>Técnico de Soporte N1 · Ayesa</strong></li>
+            <li><span>Certificación</span><strong>CCNA1 · Cisco</strong></li>
+            <li><span>Formación</span><strong>ASIR (2026) · DAM en curso</strong></li>
+            <li><span>Idiomas</span><strong>Español nativo · Inglés B2</strong></li>
+            <li><span>Ubicación</span><strong>Sevilla</strong></li>
+          </ul>
 
           <div class="quick-tags">
             <span>Linux</span>
-            <span>Redes</span>
-            <span>Docker</span>
-            <span>Proxmox</span>
             <span>Windows Server</span>
-            <span>Bash</span>
-            <span>Documentación</span>
+            <span>Cisco</span>
+            <span>Docker</span>
+            <span>Ansible</span>
+            <span>Python</span>
+            <span>C#</span>
           </div>
         </aside>
-      </div>
-
-      <div class="hero-stats">
-        <article class="stat-card reveal">
-          <span class="stat-number" data-count="6">0</span>
-          <span class="stat-suffix">+</span>
-          <span class="stat-label">Proyectos técnicos</span>
-        </article>
-
-        <article class="stat-card reveal">
-          <span class="stat-number" data-count="12">0</span>
-          <span class="stat-suffix">+</span>
-          <span class="stat-label">Tecnologías trabajadas</span>
-        </article>
-
-        <article class="stat-card reveal">
-          <span class="stat-number" data-count="4">0</span>
-          <span class="stat-suffix"> áreas</span>
-          <span class="stat-label">Sistemas, redes, despliegue y desarrollo</span>
-        </article>
-
-        <article class="stat-card stat-card-accent reveal">
-          <span class="stat-text">ASIR + DAM</span>
-          <span class="stat-label">ASIR finalizado · DAM en curso</span>
-        </article>
       </div>
     </div>
   </header>
@@ -151,7 +120,7 @@
           <div class="mini-grid">
             <div class="mini-card">
               <span class="mini-title">Experiencia</span>
-              <p>Técnico SAR en AYESA y prácticas de desarrollo y monitorización en Teamwork Solutions.</p>
+              <p>Técnico de Soporte N1 en Ayesa y prácticas de sistemas y desarrollo en Teamwork Solutions.</p>
             </div>
             <div class="mini-card">
               <span class="mini-title">Lo que busco</span>
@@ -162,72 +131,137 @@
       </div>
     </section>
 
-    <section class="section reveal" id="skills">
+    <section class="section reveal" id="experiencia">
       <div class="section-heading">
         <span class="section-tag">02</span>
+        <h2>Experiencia</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="glass-card timeline-item current">
+          <div class="timeline-meta">
+            <span class="timeline-date">Sep 2026 – Actualidad</span>
+            <span class="project-badge featured-badge">Actual</span>
+          </div>
+          <h3>Técnico de Soporte Nivel 1</h3>
+          <span class="timeline-company">Ayesa Servicios Digitales</span>
+          <p>Tickets y escalados, asistencia remota, conectividad, diagnóstico de servidores y red, y administración de sistemas Linux y Windows.</p>
+        </article>
+
+        <article class="glass-card timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Feb – May 2026</span>
+            <span class="project-category">Prácticas duales</span>
+          </div>
+          <h3>Administrador de Sistemas y Desarrollo</h3>
+          <span class="timeline-company">Teamwork Solutions</span>
+          <p>C# y Blazor con DevExpress, SQL Server, Linux y Windows Server (TSPlus), Docker Compose y monitorización con Telegraf, Prometheus y Grafana.</p>
+        </article>
+
+        <article class="glass-card timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Abr – May 2025</span>
+            <span class="project-category">Prácticas duales</span>
+          </div>
+          <h3>Técnico de Digitalización y Gestión de Datos</h3>
+          <span class="timeline-company">Universidad de Sevilla</span>
+          <p>Digitalización automática de documentos con OCR e IA y automatización del almacenamiento en Google Drive.</p>
+        </article>
+      </div>
+
+      <div class="section-more">
+        <a href="cv.html" class="text-link">Ver trayectoria completa en el CV →</a>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <div class="section-heading">
+        <span class="section-tag">03</span>
         <h2>Skills y stack técnico</h2>
       </div>
 
       <div class="skills-switcher glass-card">
         <div class="switcher-buttons" role="tablist" aria-label="Categorías de skills">
-          <button class="switch-btn active" data-skill-target="sistemas" role="tab" aria-selected="true">
-            Sistemas
-          </button>
-          <button class="switch-btn" data-skill-target="redes" role="tab" aria-selected="false">
-            Redes
-          </button>
-          <button class="switch-btn" data-skill-target="servicios" role="tab" aria-selected="false">
-            Servicios
-          </button>
-          <button class="switch-btn" data-skill-target="automatizacion" role="tab" aria-selected="false">
-            Automatización
-          </button>
+          <button class="switch-btn active" data-skill-target="sistemas" role="tab" aria-selected="true">Sistemas</button>
+          <button class="switch-btn" data-skill-target="redes" role="tab" aria-selected="false">Redes</button>
+          <button class="switch-btn" data-skill-target="devops" role="tab" aria-selected="false">Cloud y DevOps</button>
+          <button class="switch-btn" data-skill-target="desarrollo" role="tab" aria-selected="false">Desarrollo</button>
+          <button class="switch-btn" data-skill-target="seguridad" role="tab" aria-selected="false">Servicios y seguridad</button>
+          <button class="switch-btn" data-skill-target="datos" role="tab" aria-selected="false">Monitorización y datos</button>
         </div>
 
         <div class="switcher-panels">
           <div class="skill-panel active" data-skill-panel="sistemas">
             <div class="skill-list">
-              <span class="skill-pill">Debian</span>
-              <span class="skill-pill">Ubuntu</span>
+              <span class="skill-pill">Linux (Debian, Ubuntu)</span>
               <span class="skill-pill">Windows Server</span>
               <span class="skill-pill">Active Directory</span>
+              <span class="skill-pill">SSH</span>
               <span class="skill-pill">PowerShell</span>
-              <span class="skill-pill">Gestión de usuarios y servicios</span>
+              <span class="skill-pill">Proxmox</span>
+              <span class="skill-pill">KVM</span>
+              <span class="skill-pill">VirtualBox</span>
             </div>
           </div>
 
           <div class="skill-panel" data-skill-panel="redes">
             <div class="skill-list">
-              <span class="skill-pill">IPv4 / IPv6</span>
-              <span class="skill-pill">Subnetting</span>
-              <span class="skill-pill">Cisco</span>
-              <span class="skill-pill">Segmentación de red</span>
-              <span class="skill-pill">VPN</span>
-              <span class="skill-pill">Planificación de infraestructura</span>
+              <span class="skill-pill">TCP/IP</span>
+              <span class="skill-pill">VLAN</span>
+              <span class="skill-pill">DHCP</span>
+              <span class="skill-pill">NAT</span>
+              <span class="skill-pill">DNS</span>
+              <span class="skill-pill">VPN (WireGuard, OpenVPN)</span>
+              <span class="skill-pill">Cisco · CCNA1</span>
             </div>
           </div>
 
-          <div class="skill-panel" data-skill-panel="servicios">
+          <div class="skill-panel" data-skill-panel="devops">
             <div class="skill-list">
               <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Apache</span>
-              <span class="skill-pill">VirtualBox</span>
-              <span class="skill-pill">Proxmox</span>
-              <span class="skill-pill">OpenVPN</span>
-              <span class="skill-pill">Despliegue de servicios</span>
-              <span class="skill-pill">Homelab</span>
+              <span class="skill-pill">Docker Compose</span>
+              <span class="skill-pill">Kubernetes</span>
+              <span class="skill-pill">Ansible</span>
+              <span class="skill-pill">Terraform</span>
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">Jenkins</span>
+              <span class="skill-pill">Git / GitHub</span>
             </div>
           </div>
 
-          <div class="skill-panel" data-skill-panel="automatizacion">
+          <div class="skill-panel" data-skill-panel="desarrollo">
             <div class="skill-list">
-              <span class="skill-pill">Bash</span>
+              <span class="skill-pill">C#</span>
+              <span class="skill-pill">Blazor</span>
+              <span class="skill-pill">DevExpress</span>
               <span class="skill-pill">Python</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">HTML</span>
-              <span class="skill-pill">CSS</span>
-              <span class="skill-pill">Git / GitHub</span>
-              <span class="skill-pill">PowerShell</span>
+              <span class="skill-pill">Bash</span>
+              <span class="skill-pill">HTML / CSS / JavaScript</span>
+              <span class="skill-pill">WordPress</span>
+            </div>
+          </div>
+
+          <div class="skill-panel" data-skill-panel="seguridad">
+            <div class="skill-list">
+              <span class="skill-pill">Apache</span>
+              <span class="skill-pill">Nginx</span>
+              <span class="skill-pill">Proxy inverso</span>
+              <span class="skill-pill">Postfix</span>
+              <span class="skill-pill">pfSense</span>
+              <span class="skill-pill">NFTables</span>
+              <span class="skill-pill">Suricata</span>
+              <span class="skill-pill">GPG</span>
+            </div>
+          </div>
+
+          <div class="skill-panel" data-skill-panel="datos">
+            <div class="skill-list">
+              <span class="skill-pill">Prometheus</span>
+              <span class="skill-pill">Grafana</span>
+              <span class="skill-pill">Telegraf</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQL Server</span>
+              <span class="skill-pill">Oracle (SQL, PL/SQL)</span>
             </div>
           </div>
         </div>
@@ -236,7 +270,7 @@
 
     <section class="section reveal" id="proyectos">
       <div class="section-heading">
-        <span class="section-tag">03</span>
+        <span class="section-tag">04</span>
         <h2>Proyectos</h2>
       </div>
 
@@ -396,7 +430,7 @@
 
     <section class="section reveal" id="valor">
       <div class="section-heading">
-        <span class="section-tag">04</span>
+        <span class="section-tag">05</span>
         <h2>Qué valor puedo aportar como junior</h2>
       </div>
 
@@ -429,35 +463,32 @@
 
     <section class="section reveal" id="contacto">
       <div class="section-heading">
-        <span class="section-tag">05</span>
-        <h2>Contacto y recursos</h2>
+        <span class="section-tag">06</span>
+        <h2>Contacto</h2>
       </div>
 
       <div class="contact-shell glass-card highlight-panel">
         <div>
-          <span class="panel-label">Accesos directos</span>
-          <h3>Todo lo importante, accesible desde aquí</h3>
+          <span class="panel-label">Hablemos</span>
+          <h3>¿Buscas un perfil junior de sistemas o DevOps?</h3>
           <p class="contact-text">
-            Puedes acceder directamente a mi CV, LinkedIn, GitHub, correo y también
-            al apartado de <strong>Temario</strong>, donde reúno notas de primero y
-            segundo curso, materiales y documentación académica para complementar
-            mi perfil técnico.
+            Escríbeme por correo o LinkedIn. También puedes descargar mi CV en PDF
+            o revisar mis proyectos en GitHub.
           </p>
         </div>
 
         <div class="contact-actions">
-          <a href="cv.html" class="btn btn-primary">CV</a>
-          <a href="temario.html" class="btn btn-secondary">Temario</a>
-          <a href="https://github.com/Nando-Asir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+          <a href="mailto:ferdurave@gmail.com" class="btn btn-primary">ferdurave@gmail.com</a>
           <a href="https://linkedin.com/in/duran-fernando" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
-          <a href="mailto:ferdurave@gmail.com" class="btn btn-ghost">Email</a>
+          <a href="cv.html?pdf=1" class="btn btn-secondary">Descargar CV (PDF)</a>
+          <a href="https://github.com/Nando-Asir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Fernando Durán · Técnico ASIR · Estudiante de DAM · SysAdmin / DevOps Junior</p>
+    <p>Fernando Durán · SysAdmin / DevOps Junior · Sevilla</p>
   </footer>
 
   <script src="script.js"></script>

@@ -342,3 +342,29 @@ if (navAnchors.length) {
     });
   });
 })();
+
+/* ==========================================================================
+   CAPA 4 · MENÚ DESLIZABLE: mantiene a la vista el enlace activo
+   ========================================================================== */
+
+(() => {
+  const strip = document.getElementById("navLinks");
+  if (!strip) return;
+
+  let lastActive = null;
+  const centerActive = () => {
+    if (strip.scrollWidth <= strip.clientWidth) return;
+    const active = strip.querySelector("a.active");
+    if (!active || active === lastActive) return;
+    lastActive = active;
+    const target = active.offsetLeft - (strip.clientWidth - active.offsetWidth) / 2;
+    strip.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+  };
+
+  new MutationObserver(centerActive).observe(strip, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  window.addEventListener("load", centerActive);
+})();
