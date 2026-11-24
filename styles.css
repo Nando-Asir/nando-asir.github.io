@@ -2732,9 +2732,11 @@ button.btn-primary {
 }
 
 /* ==========================================================================
-   CAPA 7 · BOTÓN "CV" DEL MENÚ: normal en reposo, lima al interactuar
+   CAPA 7 · BOTONES DEL MENÚ: normales en reposo, lima al interactuar
+   (pasar el cursor, navegar con teclado, clic o toque con el dedo)
    ========================================================================== */
 
+.nav-links a,
 .nav-links a.nav-cta {
   color: var(--muted);
   font-weight: 600;
@@ -2749,7 +2751,8 @@ button.btn-primary {
     transform 0.2s var(--bounce);
 }
 
-/* En la página del CV se marca como el resto de enlaces activos */
+/* Sección o página actual: marca suave para saber dónde estás */
+.nav-links a.active,
 .nav-links a.nav-cta.active {
   color: var(--text);
   background: rgba(197, 248, 42, 0.1);
@@ -2757,7 +2760,9 @@ button.btn-primary {
   box-shadow: none;
 }
 
-/* Al pasar el ratón, al navegar con teclado y al pulsar (clic o dedo) */
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a:active,
 .nav-links a.nav-cta:hover,
 .nav-links a.nav-cta:focus-visible,
 .nav-links a.nav-cta:active {
@@ -2765,22 +2770,23 @@ button.btn-primary {
   background: var(--lime);
   border-color: var(--lime);
   box-shadow: 0 6px 20px rgba(197, 248, 42, 0.3);
+  outline: none;
 }
 
-.nav-links a.nav-cta:active {
+.nav-links a:active {
   transform: scale(0.96);
 }
 
 /* En pantallas táctiles el "hover" se queda pegado tras tocar: solo resalta mientras se pulsa */
 @media (hover: none) {
-  .nav-links a.nav-cta:hover:not(:active) {
+  .nav-links a:hover:not(:active) {
     color: var(--muted);
     background: transparent;
     border-color: transparent;
     box-shadow: none;
   }
 
-  .nav-links a.nav-cta.active:hover:not(:active) {
+  .nav-links a.active:hover:not(:active) {
     color: var(--text);
     background: rgba(197, 248, 42, 0.1);
     border-color: rgba(197, 248, 42, 0.25);
