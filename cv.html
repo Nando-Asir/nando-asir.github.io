@@ -381,6 +381,12 @@
         <span>Fernando Durán</span>
       </a>
 
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#perfil">Perfil</a></li>
         <li><a href="index.html#experiencia">Experiencia</a></li>
@@ -403,12 +409,9 @@
             titulado en ASIR, certificado <strong>CCNA1</strong> y estudiante de DAM.
             Linux, redes, Docker y automatización con Python y Bash.
           </p>
-          <p class="print-only print-contact">
-            ferdurave@gmail.com · linkedin.com/in/duran-fernando · github.com/Nando-Asir · nando-asir.github.io · Sevilla
-          </p>
 
           <div class="cv-actions">
-            <button type="button" class="btn btn-primary" id="printCv">Generar CV (PDF)</button>
+            <a href="mailto:ferdurave@gmail.com?subject=Solicitud%20de%20CV" class="btn btn-primary">Pedir CV por correo</a>
             <a href="mailto:ferdurave@gmail.com" class="btn btn-secondary">Contactar</a>
             <a href="https://linkedin.com/in/duran-fernando" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
           </div>
@@ -438,7 +441,7 @@
         <section class="glass-card cv-block reveal">
           <h2>Skills técnicas</h2>
 
-          <div class="skill-group">
+          <div class="skill-group fam-lime">
             <h3>Sistemas</h3>
             <div class="cv-badges">
               <span class="cv-badge">Linux (Debian, Ubuntu)</span>
@@ -449,7 +452,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-coral">
             <h3>Redes</h3>
             <div class="cv-badges">
               <span class="cv-badge">TCP/IP</span>
@@ -462,7 +465,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-sky">
             <h3>Cloud y virtualización</h3>
             <div class="cv-badges">
               <span class="cv-badge">AWS</span>
@@ -472,7 +475,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-lime">
             <h3>Contenedores, DevOps e IaC</h3>
             <div class="cv-badges">
               <span class="cv-badge">Docker</span>
@@ -485,7 +488,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-coral">
             <h3>Servicios</h3>
             <div class="cv-badges">
               <span class="cv-badge">Apache</span>
@@ -495,7 +498,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-sky">
             <h3>Ciberseguridad</h3>
             <div class="cv-badges">
               <span class="cv-badge">pfSense</span>
@@ -505,7 +508,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-lime">
             <h3>Monitorización</h3>
             <div class="cv-badges">
               <span class="cv-badge">Prometheus</span>
@@ -514,7 +517,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-coral">
             <h3>Bases de datos</h3>
             <div class="cv-badges">
               <span class="cv-badge">MySQL</span>
@@ -523,7 +526,7 @@
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group fam-sky">
             <h3>Desarrollo</h3>
             <div class="cv-badges">
               <span class="cv-badge">C#</span>
@@ -834,7 +837,7 @@
           <span class="cv-label">Contacto</span>
           <h2>¿Quieres contactar conmigo?</h2>
           <p class="final-contact-text">
-            Escríbeme por correo o LinkedIn, o descarga este CV en PDF.
+            Escríbeme por correo o LinkedIn y te envío mi CV.
           </p>
         </div>
 
@@ -842,7 +845,7 @@
           <a href="mailto:ferdurave@gmail.com" class="btn btn-primary">Email</a>
           <a href="https://github.com/Nando-Asir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
           <a href="https://linkedin.com/in/duran-fernando" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
-          <button type="button" class="btn btn-ghost" data-print>Generar PDF</button>
+          <a href="mailto:ferdurave@gmail.com?subject=Solicitud%20de%20CV" class="btn btn-ghost">Pedir CV por correo</a>
         </div>
       </div>
     </section>
@@ -854,21 +857,6 @@
 
   <script src="script.js"></script>
   <script>
-    /* Generar CV: abre el diálogo de impresión con "Guardar como PDF".
-       El diseño de impresión (fondo blanco, sin menús) está en styles.css */
-    const printCv = () => {
-      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
-      window.print();
-    };
-
-    document.querySelectorAll("#printCv, [data-print]").forEach((btn) =>
-      btn.addEventListener("click", printCv)
-    );
-
-    if (new URLSearchParams(location.search).get("pdf") === "1") {
-      window.addEventListener("load", () => setTimeout(printCv, 600));
-    }
-
     const expandableWork = document.getElementById("expandableWork");
     const expandableToggle = document.getElementById("expandableToggle");
 

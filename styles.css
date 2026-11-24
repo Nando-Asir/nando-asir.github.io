@@ -2531,3 +2531,202 @@ button.btn-primary {
   letter-spacing: -0.015em;
   line-height: 1.2;
 }
+
+/* ==========================================================================
+   CAPA 6 · MENÚ HAMBURGUESA EN MÓVIL/TABLET Y SKILLS DEL CV POR FAMILIAS
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+  :root {
+    --nav-h: 64px;
+  }
+
+  .navbar,
+  .navbar.scrolled {
+    height: var(--nav-h);
+    flex-wrap: nowrap;
+    row-gap: 0;
+    padding: 0 10px 0 12px;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    margin-left: auto;
+    border-radius: 14px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  .menu-toggle span {
+    width: 22px;
+    height: 2px;
+    margin: 3px 0;
+  }
+
+  .menu-toggle.open {
+    background: rgba(197, 248, 42, 0.12);
+    border-color: rgba(197, 248, 42, 0.35);
+  }
+
+  .menu-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .nav-links,
+  .nav-links.open {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: calc(100vh - var(--nav-h) - 40px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+    background: #1b1c1e;
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), var(--glass-highlight);
+    transform-origin: top right;
+    transition: opacity 0.25s ease, transform 0.3s var(--ease-out), visibility 0.3s;
+  }
+
+  .nav-links {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-links li,
+  .nav-links li:last-child {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .nav-links.open li {
+    animation: popIn 0.35s var(--ease-out) both;
+  }
+
+  .nav-links.open li:nth-child(2) { animation-delay: 30ms; }
+  .nav-links.open li:nth-child(3) { animation-delay: 60ms; }
+  .nav-links.open li:nth-child(4) { animation-delay: 90ms; }
+  .nav-links.open li:nth-child(5) { animation-delay: 120ms; }
+  .nav-links.open li:nth-child(7) { animation-delay: 160ms; }
+  .nav-links.open li:nth-child(8) { animation-delay: 190ms; }
+
+  .nav-links a {
+    display: flex;
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: none;
+    border: 1px solid transparent;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links a.active {
+    background: rgba(197, 248, 42, 0.1);
+    border-color: rgba(197, 248, 42, 0.25);
+  }
+
+  .nav-links a.nav-cta {
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .nav-sep {
+    width: auto;
+    height: 1px;
+    margin: 6px 6px;
+  }
+}
+
+/* ---------- CV: skills técnicas por familias ---------- */
+
+.fam-lime {
+  --fam: #c5f82a;
+  --fam-rgb: 197, 248, 42;
+}
+
+.fam-coral {
+  --fam: #ff7a45;
+  --fam-rgb: 255, 122, 69;
+}
+
+.fam-sky {
+  --fam: #7cc6ff;
+  --fam-rgb: 124, 198, 255;
+}
+
+.cv-block .skill-group {
+  padding: 14px 16px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(var(--fam-rgb), 0.16);
+  border-left: 3px solid var(--fam);
+  background: linear-gradient(135deg, rgba(var(--fam-rgb), 0.08), rgba(var(--fam-rgb), 0.01) 70%);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.cv-block .skill-group:hover {
+  border-color: rgba(var(--fam-rgb), 0.35);
+  border-left-color: var(--fam);
+}
+
+.cv-block .skill-group + .skill-group {
+  margin-top: 12px;
+}
+
+.cv-block .skill-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: var(--fam);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cv-block .skill-group h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fam);
+  box-shadow: 0 0 10px rgba(var(--fam-rgb), 0.6);
+}
+
+.cv-block .skill-group .cv-badge {
+  color: #f1f1f1;
+  background: rgba(var(--fam-rgb), 0.09);
+  border: 1px solid rgba(var(--fam-rgb), 0.28);
+  transition: background 0.25s ease, transform 0.25s var(--bounce);
+}
+
+.cv-block .skill-group .cv-badge:hover {
+  background: rgba(var(--fam-rgb), 0.18);
+  transform: translateY(-2px);
+}
