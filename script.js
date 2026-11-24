@@ -191,7 +191,7 @@ if (navAnchors.length) {
     ticking = true;
     requestAnimationFrame(() => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+      progress.style.setProperty("--p", max > 0 ? (window.scrollY / max).toFixed(4) : 0);
       if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 20);
       ticking = false;
     });
