@@ -2213,3 +2213,321 @@ button.btn {
 button.btn-primary {
   border: 0;
 }
+
+/* ==========================================================================
+   CAPA 5 · TEMARIO PLEGABLE (grado → curso)
+   ========================================================================== */
+
+.degree-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.degree-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  box-shadow: var(--glass-highlight);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.25s var(--bounce);
+}
+
+.degree-tab:hover {
+  border-color: rgba(197, 248, 42, 0.3);
+}
+
+.degree-tab:active {
+  transform: scale(0.98);
+}
+
+.degree-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.degree-sub {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.degree-tab.active {
+  border-color: var(--lime);
+  background:
+    linear-gradient(135deg, rgba(197, 248, 42, 0.14), rgba(255, 122, 69, 0.05)),
+    var(--glass-bg);
+  box-shadow: 0 12px 30px rgba(197, 248, 42, 0.12), var(--glass-highlight);
+}
+
+.degree-tab.active .degree-name {
+  color: var(--lime);
+}
+
+.degree-panel {
+  display: none;
+}
+
+.degree-panel.active {
+  display: grid;
+  gap: 14px;
+  animation: panelIn 0.45s var(--ease-out);
+}
+
+/* ---------- Cada curso ---------- */
+
+.course {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: var(--glass-highlight);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.course.open {
+  border-color: rgba(197, 248, 42, 0.22);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.course-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+.course-toggle:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+.course-num {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-weight: 800;
+  color: var(--lime);
+  background: rgba(197, 248, 42, 0.08);
+  border: 1px solid rgba(197, 248, 42, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.course.open .course-num {
+  background: var(--lime);
+  color: #141517;
+}
+
+.course-heading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.course-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.course-meta:empty {
+  display: none;
+}
+
+.course-state {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--glass-border);
+}
+
+.state-done {
+  color: var(--lime);
+  border-color: rgba(197, 248, 42, 0.3);
+}
+
+.state-progress {
+  color: #141517;
+  background: var(--coral);
+  border-color: var(--coral);
+}
+
+.state-soon {
+  color: var(--muted);
+}
+
+.course-chevron {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  position: relative;
+  transition: transform 0.4s var(--ease-out), background 0.3s ease;
+}
+
+.course-chevron::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.course.open .course-chevron {
+  transform: rotate(180deg);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Despliegue animado de la altura */
+.course-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.5s var(--ease-out),
+    visibility 0s linear 0.5s;
+}
+
+.course.open .course-body {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition:
+    grid-template-rows 0.5s var(--ease-out),
+    visibility 0s;
+}
+
+.course-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.course-inner > .academic-grid,
+.course-inner > .course-empty {
+  margin: 4px 22px 22px;
+}
+
+.course-inner > .academic-grid:empty {
+  display: none;
+}
+
+.course .subject-card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.5s var(--ease-out);
+}
+
+.course.open .subject-card {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--i, 0) * 40ms + 120ms);
+}
+
+.course-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 34px 20px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  color: var(--muted);
+}
+
+.course-empty strong {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 620px) {
+  .degree-tabs {
+    gap: 8px;
+  }
+
+  .degree-tab {
+    padding: 14px;
+  }
+
+  .degree-name {
+    font-size: 1.25rem;
+  }
+
+  .degree-sub {
+    font-size: 0.78rem;
+  }
+
+  .course-toggle {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .course-num {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .course-title {
+    font-size: 1.05rem;
+  }
+
+  .course-state {
+    display: none;
+  }
+
+  .course-inner > .academic-grid,
+  .course-inner > .course-empty {
+    margin: 2px 12px 14px;
+  }
+}
+
+@media print {
+  .degree-panel,
+  .course-body {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* Nombres de asignatura a un tamaño proporcionado dentro de cada curso */
+.course .subject-top h2 {
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}

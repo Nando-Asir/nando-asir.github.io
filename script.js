@@ -200,7 +200,7 @@ if (navAnchors.length) {
   onScroll();
 
   /* --- Apariciones escalonadas con IntersectionObserver --- */
-  const groups = [".hero-stats", ".projects-grid", ".three-columns", ".academic-grid", ".two-columns"];
+  const groups = [".hero-stats", ".projects-grid", ".three-columns", ".two-columns"];
   groups.forEach((sel) => {
     document.querySelectorAll(sel).forEach((group) => {
       [...group.children].forEach((child, i) => {
@@ -367,4 +367,100 @@ if (navAnchors.length) {
     attributeFilter: ["class"],
   });
   window.addEventListener("load", centerActive);
+})();
+
+/* ==========================================================================
+   CAPA 5 · TEMARIO PLEGABLE
+   - Pestañas de grado (ASIR / DAM)
+   - Dentro de cada grado, solo un curso abierto a la vez
+   - Enlaces directos: temario.html#asir-2, temario.html#dam-1, temario.html#dam
+   ========================================================================== */
+
+(() => {
+  const tabs = [...document.querySelectorAll(".degree-tab")];
+  if (!tabs.length) return;
+
+  const panels = [...document.querySelectorAll(".degree-panel")];
+  const navOffset = () => (document.querySelector(".navbar")?.offsetHeight || 0) + 24;
+
+  /* Resumen automático de cada curso: nº de asignaturas y nota media */
+  document.querySelectorAll(".course").forEach((course) => {
+    const meta = course.querySelector("[data-course-meta]");
+    const subjects = course.querySelectorAll(".subject-top h2");
+    const grades = [...course.querySelectorAll(".grade-pill")]
+      .map((g) => parseFloat(g.textContent.replace(",", ".")))
+      .filter((n) => !Number.isNaN(n));
+
+    course.querySelectorAll(".subject-card").forEach((card, i) => card.style.setProperty("--i", i));
+
+    if (!meta || !subjects.length) return;
+    let text = `${subjects.length} asignaturas`;
+    if (grades.length) {
+      const avg = grades.reduce((a, b) => a + b, 0) / grades.length;
+      text += ` · Nota media ${avg.toFixed(1).replace(".", ",")}`;
+    }
+    meta.textContent = text;
+  });
+
+  const setCourse = (course, open) => {
+    course.classList.toggle("open", open);
+    course.querySelector(".course-toggle")?.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  const openCourse = (course, scroll) => {
+    const panel = course.closest(".degree-panel");
+    panel.querySelectorAll(".course").forEach((c) => setCourse(c, c === course));
+
+    if (scroll) {
+      /* Espera a que termine de plegarse el curso anterior y lleva el nuevo a la vista */
+      setTimeout(() => {
+        const top = course.getBoundingClientRect().top + window.scrollY - navOffset();
+        if (Math.abs(top - window.scrollY) > 40) window.scrollTo({ top, behavior: "smooth" });
+      }, 540);
+    }
+  };
+
+  const showDegree = (name) => {
+    tabs.forEach((t) => {
+      const on = t.dataset.degree === name;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    panels.forEach((p) => p.classList.toggle("active", p.dataset.degreePanel === name));
+  };
+
+  tabs.forEach((tab) =>
+    tab.addEventListener("click", () => {
+      showDegree(tab.dataset.degree);
+      history.replaceState(null, "", `#${tab.dataset.degree}`);
+    })
+  );
+
+  document.querySelectorAll(".course-toggle").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const course = btn.closest(".course");
+      if (course.classList.contains("open")) {
+        setCourse(course, false);
+      } else {
+        openCourse(course, true);
+        history.replaceState(null, "", `#${course.id}`);
+      }
+    })
+  );
+
+  /* Abrir lo que indique la dirección (#asir-2, #dam-1, #dam...) */
+  const fromHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const course = document.getElementById(id);
+    if (course && course.classList.contains("course")) {
+      showDegree(course.closest(".degree-panel").dataset.degreePanel);
+      openCourse(course, false);
+    } else if (panels.some((p) => p.dataset.degreePanel === id)) {
+      showDegree(id);
+    }
+  };
+
+  fromHash();
+  window.addEventListener("hashchange", fromHash);
 })();
