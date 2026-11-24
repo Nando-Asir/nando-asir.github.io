@@ -2730,3 +2730,72 @@ button.btn-primary {
   background: rgba(var(--fam-rgb), 0.18);
   transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   CAPA 7 · BOTONES DEL MENÚ: normales en reposo, lima al interactuar
+   (pasar el cursor, navegar con teclado, clic o toque con el dedo)
+   ========================================================================== */
+
+.nav-links a,
+.nav-links a.nav-cta {
+  color: var(--muted);
+  font-weight: 600;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s var(--bounce);
+}
+
+/* Sección o página actual: marca suave para saber dónde estás */
+.nav-links a.active,
+.nav-links a.nav-cta.active {
+  color: var(--text);
+  background: rgba(197, 248, 42, 0.1);
+  border-color: rgba(197, 248, 42, 0.25);
+  box-shadow: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a:active,
+.nav-links a.nav-cta:hover,
+.nav-links a.nav-cta:focus-visible,
+.nav-links a.nav-cta:active {
+  color: #141517;
+  background: var(--lime);
+  border-color: var(--lime);
+  box-shadow: 0 6px 20px rgba(197, 248, 42, 0.3);
+  outline: none;
+}
+
+.nav-links a:active {
+  transform: scale(0.96);
+}
+
+/* En pantallas táctiles el "hover" se queda pegado tras tocar: solo resalta mientras se pulsa */
+@media (hover: none) {
+  .nav-links a:hover:not(:active) {
+    color: var(--muted);
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .nav-links a.active:hover:not(:active) {
+    color: var(--text);
+    background: rgba(197, 248, 42, 0.1);
+    border-color: rgba(197, 248, 42, 0.25);
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-links a.nav-cta {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
