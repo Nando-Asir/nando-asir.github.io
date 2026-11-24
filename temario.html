@@ -8,7 +8,7 @@
   <title>Temario | Fernando Durán</title>
   <meta
     name="description"
-    content="Temario ASIR de Fernando Durán con asignaturas, notas y estructura documental preparada para primer y segundo curso."
+    content="Temario de ASIR y DAM de Fernando Durán: asignaturas, notas y apuntes por curso."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,12 +53,12 @@
     <div class="section">
       <div class="section-heading">
         <span class="section-tag">TM</span>
-        <h1 class="subhero-title">Temario, asignaturas y notas</h1>
+        <h1 class="subhero-title">Temario y notas</h1>
       </div>
 
       <p class="subhero-text">
-        Este apartado reúne mi base académica en ASIR y la documentación asociada.
-        Incluye notas y materiales de primer y segundo curso.
+        Notas y apuntes de mis estudios. Elige el grado y despliega cada curso
+        para ver sus asignaturas y materiales.
       </p>
 
       <div class="hero-actions">
@@ -69,260 +69,370 @@
   </header>
 
   <main>
-    <section class="section reveal">
-      <div class="section-heading">
-        <span class="section-tag">1º</span>
-        <h2>Primer curso ASIR · Notas y material</h2>
+    <section class="section reveal" id="temario">
+      <div class="degree-tabs" role="tablist" aria-label="Grado">
+        <button type="button" class="degree-tab active" role="tab" aria-selected="true" data-degree="asir">
+          <span class="degree-name">ASIR</span>
+          <span class="degree-sub">Administración de Sistemas Informáticos en Red · Titulado</span>
+        </button>
+        <button type="button" class="degree-tab" role="tab" aria-selected="false" data-degree="dam">
+          <span class="degree-name">DAM</span>
+          <span class="degree-sub">Desarrollo de Aplicaciones Multiplataforma · En curso</span>
+        </button>
       </div>
 
-      <div class="academic-grid">
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Lenguaje de Marca</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Desarrollo de documentos web y tecnologías de marcado.</p>
-          <div class="subject-links">
-            <a href="Apuntes/lenguaje-marca/ud1_XML.pdf" class="text-link" target="_blank">XML</a>
-            <a href="Apuntes/lenguaje-marca/ud2_xpathXquery.pdf" class="text-link" target="_blank">XML, XQuery y XPath</a>
-            <a href="Apuntes/lenguaje-marca/ud3_HTML.pdf" class="text-link" target="_blank">HTML</a>
-            <a href="Apuntes/lenguaje-marca/ud4_css.pdf" class="text-link" target="_blank">CSS</a>
-            <a href="Apuntes/lenguaje-marca/ud5_javascript.pdf" class="text-link" target="_blank">JavaScript</a>
-          </div>
-        </article>
+      <!-- ===================== ASIR ===================== -->
+      <div class="degree-panel active" data-degree-panel="asir" role="tabpanel">
+        <div class="course open" id="asir-1">
+          <button type="button" class="course-toggle" aria-expanded="true" aria-controls="asir-1-body">
+            <span class="course-num">1º</span>
+            <span class="course-heading">
+              <span class="course-title">Primer curso</span>
+              <span class="course-meta" data-course-meta></span>
+            </span>
+            <span class="course-state state-done">Superado</span>
+            <span class="course-chevron" aria-hidden="true"></span>
+          </button>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Planificación de Redes</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Diseño e implementación de infraestructuras de red y protocolos.</p>
-          <div class="subject-links">
-            <a href="Apuntes/plani-redes/ud1_caracterizacionRedes.pdf" class="text-link" target="_blank">Caracterización de Redes</a>
-            <a href="Apuntes/plani-redes/ud2_modelosOSI-TCPIP.pdf" class="text-link" target="_blank">OSI y TCP/IP</a>
-            <a href="Apuntes/plani-redes/ud3_direccionamientoIP.pdf" class="text-link" target="_blank">Direccionamiento</a>
-            <a href="Apuntes/plani-redes/ud4_tecnologiaInalambrica.pdf" class="text-link" target="_blank">Tecnología Inalámbrica</a>
-            <a href="Apuntes/plani-redes/ud5_switchesCisco.pdf" class="text-link" target="_blank">Switches Cisco</a>
-            <a href="Apuntes/plani-redes/ud6_routerCisco.pdf" class="text-link" target="_blank">Routers Cisco</a>
-            <a href="Apuntes/plani-redes/documentoCompartido.pdf" class="text-link" target="_blank">Documento de interés</a>
-          </div>
-        </article>
+          <div class="course-body" id="asir-1-body" role="region">
+            <div class="course-inner">
+            <div class="academic-grid">
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Lenguaje de Marca</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Desarrollo de documentos web y tecnologías de marcado.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/lenguaje-marca/ud1_XML.pdf" class="text-link" target="_blank">XML</a>
+                  <a href="Apuntes/lenguaje-marca/ud2_xpathXquery.pdf" class="text-link" target="_blank">XML, XQuery y XPath</a>
+                  <a href="Apuntes/lenguaje-marca/ud3_HTML.pdf" class="text-link" target="_blank">HTML</a>
+                  <a href="Apuntes/lenguaje-marca/ud4_css.pdf" class="text-link" target="_blank">CSS</a>
+                  <a href="Apuntes/lenguaje-marca/ud5_javascript.pdf" class="text-link" target="_blank">JavaScript</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Implantación de Sistemas Operativos</h2>
-            <span class="grade-pill">8</span>
-          </div>
-          <p>Instalación, configuración y administración de sistemas Windows y Linux.</p>
-          <div class="subject-links">
-            <a href="Apuntes/implantacion-sistemas/comandosLinuxBasico.pdf" class="text-link" target="_blank">Comandos Linux básico</a>
-            <a href="Apuntes/implantacion-sistemas/comandosLinuxIntermedio.pdf" class="text-link" target="_blank">Comandos Linux intermedio</a>
-            <a href="Apuntes/implantacion-sistemas/scripts.pdf" class="text-link" target="_blank">Scripts</a>
-            <a href="Apuntes/implantacion-sistemas/programacionTareas_gestionUsuarios.pdf" class="text-link" target="_blank">Tareas y usuarios</a>
-            <a href="Apuntes/implantacion-sistemas/gestionProcesos_gestionServicios.pdf" class="text-link" target="_blank">Procesos y servicios</a>
-            <a href="Apuntes/implantacion-sistemas/gestionSamba_gestionNFS.pdf" class="text-link" target="_blank">Samba y NFS</a>
-            <a href="Apuntes/implantacion-sistemas/gestionModulos_gestionImpresoras.pdf" class="text-link" target="_blank">Módulos e impresoras</a>
-            <a href="Apuntes/implantacion-sistemas/gestionLVM_Cuotas_RAID.pdf" class="text-link" target="_blank">LVM, cuotas y RAID</a>
-          </div>
-        </article>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Planificación de Redes</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Diseño e implementación de infraestructuras de red y protocolos.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/plani-redes/ud1_caracterizacionRedes.pdf" class="text-link" target="_blank">Caracterización de Redes</a>
+                  <a href="Apuntes/plani-redes/ud2_modelosOSI-TCPIP.pdf" class="text-link" target="_blank">OSI y TCP/IP</a>
+                  <a href="Apuntes/plani-redes/ud3_direccionamientoIP.pdf" class="text-link" target="_blank">Direccionamiento</a>
+                  <a href="Apuntes/plani-redes/ud4_tecnologiaInalambrica.pdf" class="text-link" target="_blank">Tecnología Inalámbrica</a>
+                  <a href="Apuntes/plani-redes/ud5_switchesCisco.pdf" class="text-link" target="_blank">Switches Cisco</a>
+                  <a href="Apuntes/plani-redes/ud6_routerCisco.pdf" class="text-link" target="_blank">Routers Cisco</a>
+                  <a href="Apuntes/plani-redes/documentoCompartido.pdf" class="text-link" target="_blank">Documento de interés</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Gestión de Bases de Datos</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Diseño e implementación de bases de datos relacionales con SQL.</p>
-          <div class="subject-links">
-            <a href="Apuntes/base-datos/ud1_DDL.pdf" class="text-link" target="_blank">DDL</a>
-            <a href="Apuntes/base-datos/ud2_comandosSQL.pdf" class="text-link" target="_blank">DDL y DML</a>
-            <a href="Apuntes/base-datos/ud3_consultas.pdf" class="text-link" target="_blank">Consultas</a>
-            <a href="Apuntes/base-datos/ud4_subConsultas.pdf" class="text-link" target="_blank">Subconsultas</a>
-            <a href="Apuntes/base-datos/proyectoBBDD.pdf" class="text-link" target="_blank">Proyecto</a>
-          </div>
-        </article>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Implantación de Sistemas Operativos</h2>
+                  <span class="grade-pill">8</span>
+                </div>
+                <p>Instalación, configuración y administración de sistemas Windows y Linux.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/implantacion-sistemas/comandosLinuxBasico.pdf" class="text-link" target="_blank">Comandos Linux básico</a>
+                  <a href="Apuntes/implantacion-sistemas/comandosLinuxIntermedio.pdf" class="text-link" target="_blank">Comandos Linux intermedio</a>
+                  <a href="Apuntes/implantacion-sistemas/scripts.pdf" class="text-link" target="_blank">Scripts</a>
+                  <a href="Apuntes/implantacion-sistemas/programacionTareas_gestionUsuarios.pdf" class="text-link" target="_blank">Tareas y usuarios</a>
+                  <a href="Apuntes/implantacion-sistemas/gestionProcesos_gestionServicios.pdf" class="text-link" target="_blank">Procesos y servicios</a>
+                  <a href="Apuntes/implantacion-sistemas/gestionSamba_gestionNFS.pdf" class="text-link" target="_blank">Samba y NFS</a>
+                  <a href="Apuntes/implantacion-sistemas/gestionModulos_gestionImpresoras.pdf" class="text-link" target="_blank">Módulos e impresoras</a>
+                  <a href="Apuntes/implantacion-sistemas/gestionLVM_Cuotas_RAID.pdf" class="text-link" target="_blank">LVM, cuotas y RAID</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Fundamentos de Hardware</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Componentes físicos de sistemas informáticos y mantenimiento.</p>
-          <div class="subject-links">
-            <a href="Apuntes/fund-hardware/ud1_sistemas_informaticos.pdf" class="text-link" target="_blank">Sistemas Informáticos</a>
-            <a href="Apuntes/fund-hardware/ud2_representacion_comunicacion.pdf" class="text-link" target="_blank">Representación y comunicación</a>
-            <a href="Apuntes/fund-hardware/ud3_arquitectura_ordenador.pdf" class="text-link" target="_blank">Arquitectura del ordenador</a>
-            <a href="Apuntes/fund-hardware/ud4_componentesOrdenador.pdf" class="text-link" target="_blank">Componentes</a>
-            <a href="Apuntes/fund-hardware/ud5_CPD-Servidor-RAID-SAI.pdf" class="text-link" target="_blank">CPD, servidor, RAID y SAI</a>
-          </div>
-        </article>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Gestión de Bases de Datos</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Diseño e implementación de bases de datos relacionales con SQL.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/base-datos/ud1_DDL.pdf" class="text-link" target="_blank">DDL</a>
+                  <a href="Apuntes/base-datos/ud2_comandosSQL.pdf" class="text-link" target="_blank">DDL y DML</a>
+                  <a href="Apuntes/base-datos/ud3_consultas.pdf" class="text-link" target="_blank">Consultas</a>
+                  <a href="Apuntes/base-datos/ud4_subConsultas.pdf" class="text-link" target="_blank">Subconsultas</a>
+                  <a href="Apuntes/base-datos/proyectoBBDD.pdf" class="text-link" target="_blank">Proyecto</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Digitalización</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Transformación digital de procesos y documentación.</p>
-          <div class="subject-links">
-            <a href="Apuntes/digitalizacion/digitalización.pdf" class="text-link" target="_blank">Procesos digitales</a>
-          </div>
-        </article>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Fundamentos de Hardware</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Componentes físicos de sistemas informáticos y mantenimiento.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/fund-hardware/ud1_sistemas_informaticos.pdf" class="text-link" target="_blank">Sistemas Informáticos</a>
+                  <a href="Apuntes/fund-hardware/ud2_representacion_comunicacion.pdf" class="text-link" target="_blank">Representación y comunicación</a>
+                  <a href="Apuntes/fund-hardware/ud3_arquitectura_ordenador.pdf" class="text-link" target="_blank">Arquitectura del ordenador</a>
+                  <a href="Apuntes/fund-hardware/ud4_componentesOrdenador.pdf" class="text-link" target="_blank">Componentes</a>
+                  <a href="Apuntes/fund-hardware/ud5_CPD-Servidor-RAID-SAI.pdf" class="text-link" target="_blank">CPD, servidor, RAID y SAI</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Sostenibilidad</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Prácticas sostenibles aplicadas al ámbito tecnológico.</p>
-          <div class="subject-links">
-            <a href="Apuntes/sostenibilidad/sostenibilidad.pdf" class="text-link" target="_blank">Sostenibilidad</a>
-            <a href="Apuntes/sostenibilidad/retosAmbientales.pdf" class="text-link" target="_blank">Retos ambientales</a>
-            <a href="Apuntes/sostenibilidad/ud3_4_5_6.pdf" class="text-link" target="_blank">Economía circular</a>
-          </div>
-        </article>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Digitalización</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Transformación digital de procesos y documentación.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/digitalizacion/digitalización.pdf" class="text-link" target="_blank">Procesos digitales</a>
+                </div>
+              </article>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>IPE</h2>
-            <span class="grade-pill">10</span>
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Sostenibilidad</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Prácticas sostenibles aplicadas al ámbito tecnológico.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/sostenibilidad/sostenibilidad.pdf" class="text-link" target="_blank">Sostenibilidad</a>
+                  <a href="Apuntes/sostenibilidad/retosAmbientales.pdf" class="text-link" target="_blank">Retos ambientales</a>
+                  <a href="Apuntes/sostenibilidad/ud3_4_5_6.pdf" class="text-link" target="_blank">Economía circular</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>IPE</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Iniciación a la actividad emprendedora y laboral.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/ipe/ud1_saludLaboral.pdf" class="text-link" target="_blank">Salud laboral</a>
+                  <a href="Apuntes/ipe/ud2_riesgosProfesionales.pdf" class="text-link" target="_blank">Riesgos profesionales</a>
+                  <a href="Apuntes/ipe/ud3_mindfulness.pdf" class="text-link" target="_blank">Mindfulness</a>
+                  <a href="Apuntes/ipe/ud4_relacionLaboral.pdf" class="text-link" target="_blank">Relación laboral</a>
+                  <a href="Apuntes/ipe/ud5_contratoTrabajo.pdf" class="text-link" target="_blank">Contrato laboral</a>
+                  <a href="Apuntes/ipe/ud6_elSalario.pdf" class="text-link" target="_blank">El salario</a>
+                </div>
+              </article>
+            </div>
+            </div>
           </div>
-          <p>Iniciación a la actividad emprendedora y laboral.</p>
-          <div class="subject-links">
-            <a href="Apuntes/ipe/ud1_saludLaboral.pdf" class="text-link" target="_blank">Salud laboral</a>
-            <a href="Apuntes/ipe/ud2_riesgosProfesionales.pdf" class="text-link" target="_blank">Riesgos profesionales</a>
-            <a href="Apuntes/ipe/ud3_mindfulness.pdf" class="text-link" target="_blank">Mindfulness</a>
-            <a href="Apuntes/ipe/ud4_relacionLaboral.pdf" class="text-link" target="_blank">Relación laboral</a>
-            <a href="Apuntes/ipe/ud5_contratoTrabajo.pdf" class="text-link" target="_blank">Contrato laboral</a>
-            <a href="Apuntes/ipe/ud6_elSalario.pdf" class="text-link" target="_blank">El salario</a>
+        </div>
+
+        <div class="course" id="asir-2">
+          <button type="button" class="course-toggle" aria-expanded="false" aria-controls="asir-2-body">
+            <span class="course-num">2º</span>
+            <span class="course-heading">
+              <span class="course-title">Segundo curso</span>
+              <span class="course-meta" data-course-meta></span>
+            </span>
+            <span class="course-state state-done">Superado</span>
+            <span class="course-chevron" aria-hidden="true"></span>
+          </button>
+
+          <div class="course-body" id="asir-2-body" role="region">
+            <div class="course-inner">
+            <div class="academic-grid">
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Administración de Sistemas Operativos</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Gestión avanzada de servidores, automatización de tareas y servicios de directorio.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/aso/ud1_scripts.pdf" class="text-link" target="_blank">Scripts</a>
+                  <a href="Apuntes/aso/ud2_tareasProgramadas.pdf" class="text-link" target="_blank">Tareas Programadas</a>
+                  <a href="Apuntes/aso/ud3_accesoRemoto.pdf" class="text-link" target="_blank">Acceso Remoto</a>
+                  <a href="Apuntes/aso/ud4_servicioImpresora.pdf" class="text-link" target="_blank">Servicio Impresoras</a>
+                  <a href="Apuntes/aso/ud5_openldap.pdf" class="text-link" target="_blank">Open LDAP</a>
+                  <a href="Apuntes/aso/ud6_kvm.pdf" class="text-link" target="_blank">KVM</a>
+                  <a href="Apuntes/aso/ud7_wServer2022.pdf" class="text-link" target="_blank">Windows Server 2022</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Servicios de Red e Internet</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Configuración y administración de servicios de infraestructura como web, correo y DHCP.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/servicios/ud1_apache.pdf" class="text-link" target="_blank">Apache</a>
+                  <a href="Apuntes/servicios/ud2_iscDHCP.pdf" class="text-link" target="_blank">ISC DHCP</a>
+                  <a href="Apuntes/servicios/ud4_transferenciaArchivos.pdf" class="text-link" target="_blank">Transferencias de Archivos</a>
+                  <a href="Apuntes/servicios/ud5_correoElectronico.pdf" class="text-link" target="_blank">Correo Electrónico</a>
+                  <a href="Apuntes/servicios/ud6_serviciosMensajeria.pdf" class="text-link" target="_blank">Servicios de Mansajería</a>
+                  <a href="Apuntes/servicios/ud7_audioVideo.pdf" class="text-link" target="_blank">Audio y Vídeo</a>
+                  <a href="Apuntes/servicios/ud8_video.pdf" class="text-link" target="_blank">Video y Streaming</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Implantación de Aplicaciones Web</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Despliegue, configuración y administración de aplicaciones web.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/iaw/ud1_docker.pdf" class="text-link" target="_blank">Docker</a>
+                  <a href="Apuntes/iaw/ud2_python.pdf" class="text-link" target="_blank">Python</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Seguridad y Alta Disponibilidad</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Implementación de seguridad perimetral, cortafuegos y políticas de protección de red.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/sad/ud1_fundamentos.pdf" class="text-link" target="_blank">Fundamentos</a>
+                  <a href="Apuntes/sad/ud2_seguridadPerimetral.pdf" class="text-link" target="_blank">Seguridad Perimetral</a>
+                  <a href="Apuntes/sad/ud3_ iptables.pdf" class="text-link" target="_blank">IP Tables</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Sistemas Gestores de Bases de Datos</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Administración, gestión de almacenamiento y programación PL/SQL en bases de datos.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/bbdd/ud1_plsql.pdf" class="text-link" target="_blank">PLSql</a>
+                  <a href="Apuntes/bbdd/ud2_gestionUsuarios.pdf" class="text-link" target="_blank">Gestión de Usuarios</a>
+                  <a href="Apuntes/bbdd/ud3_gestionAlmacenamiento.pdf" class="text-link" target="_blank">Gestión de Almacenamiento</a>
+                  <a href="Apuntes/bbdd/comandos.pdf" class="text-link" target="_blank">Lista de comandos</a>
+                  <a href="Apuntes/bbdd/proyectoFernando.pdf" class="text-link" target="_blank">Proyecto de BBDD</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Proyecto Intermodular</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Diseño e implementación de un proyecto global que integra los conocimientos del ciclo.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/proyecto/2025-2026-Proyecto Intermodular-Fernando.pdf" class="text-link" target="_blank">Manual y Guía</a>
+                </div>
+              </article>
+
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Herramientas y Técnicas DevOps</h2>
+                  <span class="grade-pill">10</span>
+                </div>
+                <p>Automatización, control de versiones y monitorización..</p>
+                <div class="subject-links">
+                  <a href="Apuntes/optativa/powerShell_newbie.pdf" class="text-link" target="_blank">PowerShell Básico</a>
+                  <a href="Apuntes/optativa/powerShell_admin.pdf" class="text-link" target="_blank">Powershell Administrador</a>
+                  <a href="Apuntes/optativa/ud1_introduccionDevops.pdf" class="text-link" target="_blank">Introducción DevOps</a>
+                  <a href="Apuntes/optativa/ud2_gitMarkdownGithub.pdf" class="text-link" target="_blank">Git Markdown</a>
+                  <a href="Apuntes/optativa/ud3_monitorización.pdf" class="text-link" target="_blank">Monitorización</a>
+                </div>          
+              </article>
+
+               <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Inglés Profesional</h2>
+                  <span class="grade-pill">8</span>
+                </div>
+                <p>Comunicación técnica en inglés orientada al sector tecnológico y empresarial.</p>
+                <div class="subject-top">
+                  <h2>IPE II</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Desarrollo de habilidades para la empleabilidad, orientación laboral y entorno profesional.</p>
+              </article>
+            </div>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
-    </section>
 
-    <section class="section reveal">
-      <div class="section-heading">
-        <span class="section-tag">2º</span>
-        <h2>Segundo curso ASIR · Notas y material</h2>
-      </div>
+      <!-- ===================== DAM =====================
+           Para publicar un curso: añade las tarjetas dentro de su
+           "academic-grid", borra el bloque "course-empty" y cambia
+           el texto de "course-state" (p. ej. "Superado").            -->
+      <div class="degree-panel" data-degree-panel="dam" role="tabpanel">
+        <div class="course open" id="dam-1">
+          <button type="button" class="course-toggle" aria-expanded="true" aria-controls="dam-1-body">
+            <span class="course-num">1º</span>
+            <span class="course-heading">
+              <span class="course-title">Primer curso</span>
+              <span class="course-meta" data-course-meta></span>
+            </span>
+            <span class="course-state state-progress">En curso</span>
+            <span class="course-chevron" aria-hidden="true"></span>
+          </button>
 
-      <div class="academic-grid">
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Administración de Sistemas Operativos</h2>
-            <span class="grade-pill">9</span>
+          <div class="course-body" id="dam-1-body" role="region">
+            <div class="course-inner">
+            <div class="academic-grid">
+              <!-- Cuando tengas el temario, copia aquí una tarjeta como esta:
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Nombre de la asignatura</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Descripción breve.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/dam/carpeta/archivo.pdf" class="text-link" target="_blank">Tema 1</a>
+                </div>
+              </article>
+              -->
+            </div>
+            <div class="course-empty">
+              <strong>Temario en preparación</strong>
+              <span>Lo publicaré al terminar el primer curso de DAM.</span>
+            </div>
+            </div>
           </div>
-          <p>Gestión avanzada de servidores, automatización de tareas y servicios de directorio.</p>
-          <div class="subject-links">
-            <a href="Apuntes/aso/ud1_scripts.pdf" class="text-link" target="_blank">Scripts</a>
-            <a href="Apuntes/aso/ud2_tareasProgramadas.pdf" class="text-link" target="_blank">Tareas Programadas</a>
-            <a href="Apuntes/aso/ud3_accesoRemoto.pdf" class="text-link" target="_blank">Acceso Remoto</a>
-            <a href="Apuntes/aso/ud4_servicioImpresora.pdf" class="text-link" target="_blank">Servicio Impresoras</a>
-            <a href="Apuntes/aso/ud5_openldap.pdf" class="text-link" target="_blank">Open LDAP</a>
-            <a href="Apuntes/aso/ud6_kvm.pdf" class="text-link" target="_blank">KVM</a>
-            <a href="Apuntes/aso/ud7_wServer2022.pdf" class="text-link" target="_blank">Windows Server 2022</a>
-          </div>
-        </article>
+        </div>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Servicios de Red e Internet</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Configuración y administración de servicios de infraestructura como web, correo y DHCP.</p>
-          <div class="subject-links">
-            <a href="Apuntes/servicios/ud1_apache.pdf" class="text-link" target="_blank">Apache</a>
-            <a href="Apuntes/servicios/ud2_iscDHCP.pdf" class="text-link" target="_blank">ISC DHCP</a>
-            <a href="Apuntes/servicios/ud4_transferenciaArchivos.pdf" class="text-link" target="_blank">Transferencias de Archivos</a>
-            <a href="Apuntes/servicios/ud5_correoElectronico.pdf" class="text-link" target="_blank">Correo Electrónico</a>
-            <a href="Apuntes/servicios/ud6_serviciosMensajeria.pdf" class="text-link" target="_blank">Servicios de Mansajería</a>
-            <a href="Apuntes/servicios/ud7_audioVideo.pdf" class="text-link" target="_blank">Audio y Vídeo</a>
-            <a href="Apuntes/servicios/ud8_video.pdf" class="text-link" target="_blank">Video y Streaming</a>
-          </div>
-        </article>
+        <div class="course" id="dam-2">
+          <button type="button" class="course-toggle" aria-expanded="false" aria-controls="dam-2-body">
+            <span class="course-num">2º</span>
+            <span class="course-heading">
+              <span class="course-title">Segundo curso</span>
+              <span class="course-meta" data-course-meta></span>
+            </span>
+            <span class="course-state state-soon">Próximamente</span>
+            <span class="course-chevron" aria-hidden="true"></span>
+          </button>
 
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Implantación de Aplicaciones Web</h2>
-            <span class="grade-pill">9</span>
+          <div class="course-body" id="dam-2-body" role="region">
+            <div class="course-inner">
+            <div class="academic-grid">
+              <!-- Cuando tengas el temario, copia aquí una tarjeta como esta:
+              <article class="subject-card glass-card">
+                <div class="subject-top">
+                  <h2>Nombre de la asignatura</h2>
+                  <span class="grade-pill">9</span>
+                </div>
+                <p>Descripción breve.</p>
+                <div class="subject-links">
+                  <a href="Apuntes/dam/carpeta/archivo.pdf" class="text-link" target="_blank">Tema 1</a>
+                </div>
+              </article>
+              -->
+            </div>
+            <div class="course-empty">
+              <strong>Próximamente</strong>
+              <span>Disponible al terminar el segundo curso de DAM.</span>
+            </div>
+            </div>
           </div>
-          <p>Despliegue, configuración y administración de aplicaciones web.</p>
-          <div class="subject-links">
-            <a href="Apuntes/iaw/ud1_docker.pdf" class="text-link" target="_blank">Docker</a>
-            <a href="Apuntes/iaw/ud2_python.pdf" class="text-link" target="_blank">Python</a>
-          </div>
-        </article>
-
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Seguridad y Alta Disponibilidad</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Implementación de seguridad perimetral, cortafuegos y políticas de protección de red.</p>
-          <div class="subject-links">
-            <a href="Apuntes/sad/ud1_fundamentos.pdf" class="text-link" target="_blank">Fundamentos</a>
-            <a href="Apuntes/sad/ud2_seguridadPerimetral.pdf" class="text-link" target="_blank">Seguridad Perimetral</a>
-            <a href="Apuntes/sad/ud3_ iptables.pdf" class="text-link" target="_blank">IP Tables</a>
-          </div>
-        </article>
-
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Sistemas Gestores de Bases de Datos</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Administración, gestión de almacenamiento y programación PL/SQL en bases de datos.</p>
-          <div class="subject-links">
-            <a href="Apuntes/bbdd/ud1_plsql.pdf" class="text-link" target="_blank">PLSql</a>
-            <a href="Apuntes/bbdd/ud2_gestionUsuarios.pdf" class="text-link" target="_blank">Gestión de Usuarios</a>
-            <a href="Apuntes/bbdd/ud3_gestionAlmacenamiento.pdf" class="text-link" target="_blank">Gestión de Almacenamiento</a>
-            <a href="Apuntes/bbdd/comandos.pdf" class="text-link" target="_blank">Lista de comandos</a>
-            <a href="Apuntes/bbdd/proyectoFernando.pdf" class="text-link" target="_blank">Proyecto de BBDD</a>
-          </div>
-        </article>
-
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Proyecto Intermodular</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Diseño e implementación de un proyecto global que integra los conocimientos del ciclo.</p>
-          <div class="subject-links">
-            <a href="Apuntes/proyecto/2025-2026-Proyecto Intermodular-Fernando.pdf" class="text-link" target="_blank">Manual y Guía</a>
-          </div>
-        </article>
-
-        <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Herramientas y Técnicas DevOps</h2>
-            <span class="grade-pill">10</span>
-          </div>
-          <p>Automatización, control de versiones y monitorización..</p>
-          <div class="subject-links">
-            <a href="Apuntes/optativa/powerShell_newbie.pdf" class="text-link" target="_blank">PowerShell Básico</a>
-            <a href="Apuntes/optativa/powerShell_admin.pdf" class="text-link" target="_blank">Powershell Administrador</a>
-            <a href="Apuntes/optativa/ud1_introduccionDevops.pdf" class="text-link" target="_blank">Introducción DevOps</a>
-            <a href="Apuntes/optativa/ud2_gitMarkdownGithub.pdf" class="text-link" target="_blank">Git Markdown</a>
-            <a href="Apuntes/optativa/ud3_monitorización.pdf" class="text-link" target="_blank">Monitorización</a>
-          </div>          
-        </article>
-
-         <article class="subject-card glass-card">
-          <div class="subject-top">
-            <h2>Inglés Profesional</h2>
-            <span class="grade-pill">8</span>
-          </div>
-          <p>Comunicación técnica en inglés orientada al sector tecnológico y empresarial.</p>
-          <div class="subject-top">
-            <h2>IPE II</h2>
-            <span class="grade-pill">9</span>
-          </div>
-          <p>Desarrollo de habilidades para la empleabilidad, orientación laboral y entorno profesional.</p>
-        </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Fernando Durán · Temario ASIR (1º y 2º)</p>
+    <p>Fernando Durán · Temario ASIR y DAM</p>
   </footer>
 
   <script src="script.js"></script>
